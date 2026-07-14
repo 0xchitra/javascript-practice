@@ -71,7 +71,7 @@ b = 5
 ### Q12. Create variables:
 ```
 length = 10
-width = 5
+width = 6
 ```
 
 Calculate the area of a rectangle.
@@ -99,8 +99,8 @@ Welcome Alex!
 
 ### Q16. Create variables:
 ```
-a = 25
-b = 5
+a16 = 25
+b16 = 5
 ```
 
 Print:
@@ -113,13 +113,13 @@ Print:
 ### Q17. What will this output?
 
 ```js
-let a = 5;
-let b = a;
+let a17 = 5;
+let b17 = a17;
 
-a = 20;
+a17 = 20;
 
-console.log(a);
-console.log(b);
+console.log(a17);
+console.log(b17);
 ```
 
 Explain why.
@@ -173,23 +173,23 @@ Combine them into one variable.
 ### Q23. Predict the output.
 
 ```js
-let a = 10;
+let a23 = 10;
 
-let b = a++;
+let b23 = a23++;
 
-console.log(a);
-console.log(b);
+console.log(a23);
+console.log(b23);
 ```
 
 ### Q24. Predict the output.
 
 ```js
-let a = 10;
+let a24 = 10;
 
-let b = ++a;
+let b24 = ++a24;
 
-console.log(a);
-console.log(b);
+console.log(a24);
+console.log(b24);
 ```
 
 ### Q25. What is variable shadowing?
@@ -242,7 +242,7 @@ Why?
 ```js
 console.log(a);
 
-var a = 10;
+var a29 = 10;
 ```
 
 ### Q30. Guess the output.
@@ -250,7 +250,7 @@ var a = 10;
 ```js
 console.log(a);
 
-let a = 10;
+let a30 = 10;
 ```
 
 Explain the difference.
@@ -265,11 +265,11 @@ Explain the difference.
 ### Q32. Predict the output.
 
 ```js
-var a = 10;
+var a32 = 10;
 
 function test() {
-    console.log(a);
-    var a = 20;
+    console.log(a32);
+    var a32 = 20;
 }
 
 test();
@@ -280,10 +280,10 @@ Explain.
 ### Q33. Predict the output.
 
 ```js
-let a = 5;
+let a33 = 5;
 
 function test() {
-    console.log(a);
+    console.log(a33);
 }
 
 test();
@@ -293,10 +293,10 @@ test();
 ### Q34. Predict the output.
 
 ```js
-let x = 10;
+let x34 = 10;
 
 function demo() {
-    let x = 20;
+    let x34 = 20;
 
     function inside() {
         console.log(x);
@@ -311,20 +311,20 @@ demo();
 ### Q35. Predict the output.
 
 ```js
-let a = 5;
+let a35 = 5;
 
 {
-    let a = 10;
+    let a35 = 10;
 
     {
-        let a = 20;
-        console.log(a);
+        let a35 = 20;
+        console.log(a35);
     }
 
-    console.log(a);
+    console.log(a35);
 }
 
-console.log(a);
+console.log(a35);
 ```
 
 ### Q36. Find the bug.
@@ -400,8 +400,8 @@ Employed   : true
 Without using numbers directly, make:
 
 ```js
-let a = true;
-let b = true;
+let a41 = true;
+let b41 = true;
 ```
 
 Calculate:
