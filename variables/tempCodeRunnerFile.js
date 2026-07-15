@@ -1,5 +1,2 @@
-
-let b24 = ++a24;
-
-console.log(a24);
-console.log(b24);
+; //output: 10
+// let a30 = 10;

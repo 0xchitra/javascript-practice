@@ -299,7 +299,7 @@ function demo() {
     let x34 = 20;
 
     function inside() {
-        console.log(x);
+        console.log(x34);
     }
 
     inside();

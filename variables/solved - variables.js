@@ -151,23 +151,87 @@ console.log(name25);
 
 //Q27
 const person = {
-    name: "John", 
-    age: 22
-}
+  name: "John",
+  age: 22,
+};
 //person.name = "chitra"; is allowed
 //person.age = 30; is allowed
 //person{ Nam = "chitra";} is not allowed
 
 // Q28
-const arr = [1,2,3]; //skip arrays for now
+const arr = [1, 2, 3]; //skip arrays for now
 arr.push(4); //this will add 4 at the end of the array
 
 console.log(arr);
 
 //Q29
-console.log(a29); //output: 10
-var a29 = 10; //hoisting
+// console.log(a29); //output: undefined
+// var a29 = 10; //hoisting
 
 //30
-console.log(a30); //output: 10
-let a30 = 10; //hoisting
+// console.log(a30); //output: cannot access before initialization
+// //temoporal dead zone
+// let a30 = 10;
+
+//31
+
+//32
+var a32 = 10;
+
+function test() {
+  console.log(a32);
+  var a32 = 20; //hoisting
+}
+
+test(); //output: undefined
+
+//33
+// let a33 = 5;
+
+// function test() {
+//   console.log(a33); //temporal dead zone
+// }
+
+// test(); //output: cannot access before initialization
+
+//34
+let x34 = 10;
+
+function demo() {
+  let x34 = 20;
+
+  function inside() {
+    console.log(x34);
+  }
+
+  inside();
+}
+
+demo(); //output: 20
+
+//35
+let a35 = 5;
+
+{
+  let a35 = 10;
+
+  {
+    let a35 = 20;
+    console.log(a35); //output:20
+  }
+
+  console.log(a35); //output:10
+}
+
+console.log(a35); //output:5
+
+//36
+const total = 100;
+
+if (true) {
+  total === 200; //total = 200; will refer assigning value
+}
+
+console.log(total);
+
+//37
