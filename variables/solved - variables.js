@@ -174,6 +174,9 @@ console.log(arr);
 // let a30 = 10;
 
 //31
+// var -> hoisted + initialized to undefined
+// let -> hoisted, but blocked by the temporal dead zone
+// const -> hoisted, but blocked by the temporal dead zone + cannot be re-assigned
 
 //32
 var a32 = 10;
@@ -235,3 +238,36 @@ if (true) {
 console.log(total);
 
 //37
+// console.log(vara);
+
+// var vara = 1;
+
+// console.log(lete);
+
+// let lete = 1;
+
+//temporal dead zone is the period from entering a block scope until let or const variable is initialized
+
+//38
+// 1> var is funtion scoped, not block scoped
+// 2> it allows re-declaration
+// 3> variable can leak out of blocks
+// 4> problem in looping and asynchronous code
+// 5> hoisting initialized as `undefined`, which may hide bugs
+
+//39
+let product = "Mouse";
+let pric = 500;
+let quant = 3;
+let subtotal = price*quantity;
+let gst = subtotal*0.18;
+let grandtotal = subtotal-gst;
+
+console.log(`Product : ${product}`);
+console.log(`Price : ${pric}`);
+console.log(`Quantity : ${quant}`);
+console.log(`Subtotal : ${subtotal}`);
+console.log(`GST : ${gst}`);
+console.log(`Grand Total : ${grandtotal}`);
+
+//40
