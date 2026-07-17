@@ -1,0 +1,326 @@
+# JavaScript Data Types Practice Questions
+
+# Beginner
+
+Q1
+Create a variable named `name` and store your name in it.
+
+Q2
+Create a variable `age` and store your age as a number.
+
+Q3
+Create a boolean variable `isStudent`.
+
+Q4
+Create a variable `city` and print its data type.
+
+Q5
+Store `null` in a variable and print its type.
+
+Q6
+Create an undefined variable without assigning any value.
+
+Q7
+Print the type of:
+- "Hello"
+- 100
+- true
+- undefined
+- null
+
+Q8
+Create one variable for each primitive data type.
+
+Q9
+Create a variable using `BigInt`.
+
+Q10
+Create a `Symbol` and print it.
+
+---
+
+# Easy
+
+Q11
+Predict the output before running:
+
+console.log(typeof "42");
+console.log(typeof 42);
+console.log(typeof true);
+console.log(typeof null);
+console.log(typeof undefined);
+
+Q12
+Store your favorite movie in a string and print its length.
+
+Q13
+Store your height as a decimal number.
+
+Print its type.
+
+Q14
+Create an object named `person` with:
+- name
+- age
+
+Print its type.
+
+Q15
+Create an array of five fruits.
+
+Print its type.
+
+Q16
+Create a function and print its type.
+
+Q17
+What is the difference between:
+
+let a;
+let b = null;
+
+Q18
+Print the type of:
+
+[]
+{}
+() => {}
+
+Q19
+Can a variable hold different data types during execution?
+Try it yourself.
+
+Q20
+Predict the output:
+
+let value = true;
+
+value = "hello";
+
+value = 100;
+
+console.log(typeof value);
+
+---
+
+# Intermediate
+
+Q21
+Check whether each value is primitive or non-primitive.
+
+100
+"JS"
+false
+{}
+[]
+null
+undefined
+Symbol()
+10n
+
+Q22
+Why does this return `"object"`?
+
+typeof null
+
+Q23
+Create an object and add a new property after creation.
+
+Q24
+Create an array containing mixed data types.
+
+Example:
+- string
+- number
+- boolean
+- object
+
+Q25
+Create an object with:
+- string
+- number
+- boolean
+- array
+- nested object
+
+Q26
+Predict the output:
+
+let x = {};
+
+let y = x;
+
+console.log(x === y);
+
+Explain why.
+
+Q27
+Predict:
+
+let a = 10;
+let b = a;
+
+b = 20;
+
+console.log(a);
+console.log(b);
+
+Q28
+Predict:
+
+let obj1 = {
+    name: "Alex"
+};
+
+let obj2 = obj1;
+
+obj2.name = "John";
+
+console.log(obj1.name);
+
+Q29
+Write code to check whether a variable is an array.
+
+Q30
+Write code to check whether a variable is `null`.
+
+---
+
+# Advanced
+
+Q31
+Predict every output.
+
+console.log(typeof NaN);
+console.log(typeof Infinity);
+console.log(typeof -Infinity);
+
+Q32
+Why is this true?
+
+NaN !== NaN
+
+Q33
+Find the data type of:
+
+typeof typeof 10
+
+Explain.
+
+Q34
+Predict:
+
+console.log(typeof []);
+console.log(Array.isArray([]));
+
+Q35
+What's the difference between:
+
+typeof {}
+
+and
+
+Array.isArray({})
+
+Q36
+Explain why functions are considered objects in JavaScript.
+
+Q37
+Predict:
+
+let sym1 = Symbol("id");
+let sym2 = Symbol("id");
+
+console.log(sym1 === sym2);
+
+Q38
+Predict:
+
+let big = 10n;
+
+console.log(typeof big);
+
+Q39
+Can you perform this?
+
+10n + 5
+
+If not, explain why.
+
+Q40
+Predict:
+
+console.log(Boolean(""));
+console.log(Boolean(" "));
+console.log(Boolean(0));
+console.log(Boolean(1));
+console.log(Boolean([]));
+console.log(Boolean({}));
+
+---
+
+# Expert
+
+Q41
+Without running the code, predict every output.
+
+console.log(typeof null);
+console.log(typeof []);
+console.log(typeof {});
+console.log(typeof (() => {}));
+console.log(typeof Symbol());
+console.log(typeof 100n);
+
+Q42
+Explain the difference between:
+- Primitive values
+- Primitive wrappers
+- Objects
+
+Q43
+Why are strings immutable but objects mutable?
+
+Q44
+Explain pass-by-value vs pass-by-reference behavior in JavaScript using examples.
+
+Q45
+Create one example demonstrating every JavaScript data type in a single program.
+
+Q46
+Build a function that takes any value and prints:
+- the value
+- its data type
+- whether it is primitive or non-primitive
+
+Q47
+Write your own `isPrimitive(value)` function without using any library.
+
+Q48
+Research Question:
+Why was `Symbol` introduced in ES6? Give one real-world use case.
+
+Q49
+Research Question:
+Why was `BigInt` added to JavaScript? What limitation does it solve?
+
+Q50 (Challenge)
+Given the following values:
+
+[
+    42,
+    "hello",
+    true,
+    undefined,
+    null,
+    Symbol(),
+    100n,
+    {},
+    [],
+    function () {}
+]
+
+Write a program that prints for each value:
+- Value
+- `typeof`
+- Primitive or Non-Primitive
+- Special Notes (if any)
