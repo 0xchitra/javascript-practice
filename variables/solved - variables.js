@@ -259,9 +259,9 @@ console.log(total);
 let product = "Mouse";
 let pric = 500;
 let quant = 3;
-let subtotal = price*quantity;
-let gst = subtotal*0.18;
-let grandtotal = subtotal-gst;
+let subtotal = price * quantity;
+let gst = subtotal * 0.18;
+let grandtotal = subtotal - gst;
 
 console.log(`Product : ${product}`);
 console.log(`Price : ${pric}`);
@@ -271,3 +271,78 @@ console.log(`GST : ${gst}`);
 console.log(`Grand Total : ${grandtotal}`);
 
 //40
+let name40 = "John";
+let age40 = 24;
+let country40 = "India";
+let profession = "Web developer";
+let salary = 50000;
+let experience = "2 years";
+let skills = "HTML, CSS, JavaScript";
+let employed = true;
+
+console.log("========== PROFILE ==========");
+console.log(`Name       : ${name40}`);
+console.log(`Age        : ${age40}`);
+console.log(`Country    : ${country40}`);
+console.log(`Profession : ${profession}`);
+console.log(`Salary     : ${salary}`);
+console.log(`Experience : ${experience}`);
+console.log(`Skills     : ${skills}`);
+console.log(`Employed   : ${employed}`);
+console.log("=============================");
+
+//41
+let a41 = true;
+let b41 = true;
+
+const two = a41 + b41;
+const four = two*two;
+const eight = four*two;
+const sixteen = eight*two;
+
+console.log(two);
+console.log(four);
+console.log(eight);
+console.log(sixteen);
+
+//42
+ let k=1, l=2, m=3, d=4, e=5, f=6, g=7, h=8, i=9, j=10;
+
+ //43
+ let A = 1;
+ let B = 2;
+ let C = 3;
+
+ [A, B, C] = [C, B, A];
+
+ //44
+ let numb = 123;
+ let str = "hello";
+ let booln = true;
+ let obje = {name:"daya", age: 22,};
+ let arra = [1, 2, 3, 4];
+
+ console.log(typeof(numb));
+ console.log(typeof(str));
+ console.log(typeof(booln));
+ console.log(typeof(obje));
+ console.log(typeof(arra));
+
+ //45
+ let name45 = "hugo";
+ let rNo = 2020;
+ let age45 = 20;
+ let sub1 = 90, sub2 =89, sub3 = 99, sub4 = 79, sub5 = 88;
+ let total45 = (sub1+sub2+sub3+sub4+sub5);
+ let avg = total45/5;
+ let percent = (total45/500)*100;
+ let result = percent>=30 ? "pass" : "fail";
+
+ console.log(name45);
+ console.log(rNo);
+ console.log(age45);
+ console.log(`sub1= ${sub1}, sub2= ${sub2} , sub3 = ${sub3}, sub4 = ${sub4}, sub5 = ${sub5}`);
+ console.log(total45);
+ console.log(avg);
+ console.log(percent);
+ console.log(result);
