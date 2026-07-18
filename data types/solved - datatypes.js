@@ -148,7 +148,7 @@ let y = x;
 
 console.log(x === y); //true, cause both x and y point to the same object in memory
 
-//Q27 
+//Q27
 let a27 = 10;
 let b27 = a27;
 
@@ -159,7 +159,7 @@ console.log(b27); //20
 
 //Q28
 let obj1 = {
-    name: "Alex"
+  name: "Alex",
 };
 
 let obj2 = obj1;
@@ -170,9 +170,56 @@ console.log(obj1.name); //John
 
 //Q29
 let arr = [1, 2, 3];
-console.log(Array.isArray(arr)); //true 
+console.log(Array.isArray(arr)); //true
 
 //Q30
-const value = null;
+const val = null;
 
-console.log(value === null); //true
+console.log(val === null); //true
+
+//Q31
+console.log(typeof NaN); // number
+console.log(typeof Infinity); // number
+console.log(typeof -Infinity); // number
+
+//Q32
+NaN !== NaN; // true
+// This is because NaN is not equal to anything, including itself. This is a design decision in javaScript to handle the special case of NaN(Not-a-Number).
+
+//Q33
+console.log(typeof typeof 10); //string
+
+//Q34
+console.log(typeof []); //object
+console.log(Array.isArray([])); //true
+
+//Q35
+// typeof {} and Array.isArray({})
+// typeof {} returns "object",
+// Array.isArray({}) returns false
+
+//Q36 Explain why functions are considered objects in JavaScript.
+//because they can have properties and methods, just like other objects. Functions can be assigned to variables, passed as arguments to other functions, and returned from functions. They can also have their own properties and methods, which allows them to be treated as first-class citizens in the language.
+
+//Q37
+let sym1 = Symbol("id");
+let sym2 = Symbol("id");
+
+console.log(sym1 === sym2); //false, because each Symbol is unique, even if they have the same description.
+
+//Q38
+let bigg = 10n;
+
+console.log(typeof bigg); // bigint
+
+//Q39 Can you perform this?
+// 10n + 5
+//you cannot perform this operation because BigInt and Number types cannot be mixed in arithmetic operations. You need to convert the Number to a BigInt before performing the addition. For example, `10n + BigInt(5)` or `Number(10n) + 5`.
+
+//Q40
+console.log(Boolean("")); //false
+console.log(Boolean(" ")); //true
+console.log(Boolean(0)); //false
+console.log(Boolean(1)); //true
+console.log(Boolean([])); //true
+console.log(Boolean({})); //true
