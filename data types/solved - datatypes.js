@@ -103,3 +103,76 @@ console.log(typeof value);
 // value = 100;
 
 // console.log(typeof value);
+
+//Q21
+console.log(typeof 100); // number
+console.log(typeof "JS"); // string
+console.log(typeof false); // boolean
+console.log(typeof {}); // object
+console.log(typeof []); // object
+console.log(typeof null); // object
+console.log(typeof undefined); // undefined
+console.log(typeof Symbol()); // symbol
+console.log(typeof 10n); // bigint
+
+//Q22
+// typeof null is object
+//This is a well-known bug in JavaScript that has existed since the language was first created. This behavior is kept for backward compatibility, because changing it would break millions of existing websites and applications.
+
+//Q23
+let address = {
+  street: "123 Main St",
+  city: "Nagaon",
+};
+address["zip"] = 782001;
+console.log(address);
+
+//Q24
+let mixArr = ["chitra", 20, true, null, undefined, { name: "daya" }];
+
+//Q25
+let mixObj = {
+  name: "chitra",
+  age: 22,
+  isStudent: true,
+  address: {
+    street: "123 Main St",
+    city: "Nagaon",
+  },
+};
+
+//Q26
+let x = {};
+
+let y = x;
+
+console.log(x === y); //true, cause both x and y point to the same object in memory
+
+//Q27 
+let a27 = 10;
+let b27 = a27;
+
+b27 = 20;
+
+console.log(a27); //10
+console.log(b27); //20
+
+//Q28
+let obj1 = {
+    name: "Alex"
+};
+
+let obj2 = obj1;
+
+obj2.name = "John";
+
+console.log(obj1.name); //John
+
+//Q29
+let arr = [1, 2, 3];
+console.log(Array.isArray(arr)); //true 
+
+//Q30
+const value = null;
+
+console.log(value === null); //true
