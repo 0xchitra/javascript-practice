@@ -1,6 +1,6 @@
 # JavaScript Operators Practice Questions
 
-## Beginner
+# Beginner ->
 
 ### Q1. Add two numbers and print the result.
 
@@ -206,7 +206,7 @@ console.log(true || "Hello");
 
 ---
 
-## 🔥 Advanced
+# Advanced ->
 
 ### Q53. Swap two variables without using a third variable **using arithmetic operators only**.
 
