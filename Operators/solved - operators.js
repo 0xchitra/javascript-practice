@@ -253,3 +253,16 @@ console.log(false && "Hello"); // 'AND' returns first false value
 
 //Q48
 console.log(true || "Hello"); // 'OR' returns first truth value
+
+//Q49
+console.log(5 & 3);
+
+//Q50
+console.log(5 | 3);
+
+//Q51
+console.log(5 << 2);
+
+//Q52
+console.log(20 >> 2);
+
