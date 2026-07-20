@@ -200,7 +200,7 @@ console.log(5 + 2 * 3); //11
 console.log((5 + 2) * 3); //21
 
 //35
-console.log(true || false && false); //treu
+console.log(true || (false && false)); //treu
 
 //Q36
 console.log(!false && false); //false
@@ -228,10 +228,28 @@ console.log(null === undefined); //false
 console.log([] == false); //'0' means false, so its true
 
 //Q43
-console.log("" == 0);// 0 == 0, true
+console.log("" == 0); // 0 == 0, true
 
 //Q44
 console.log("10" > 2); //both values are became string
 
 // '==' converts type if needed
 // '===' no type conversion like string to number
+
+//Q45
+let IsLoggedIn = true;
+function greet() {
+  console.log("welcome back to your account");
+}
+IsLoggedIn && greet();
+
+//Q46
+let user = "";
+let DisplayName = "" || "guest";
+console.log(DisplayName);
+
+//Q47
+console.log(false && "Hello"); // 'AND' returns first false value
+
+//Q48
+console.log(true || "Hello"); // 'OR' returns first truth value
