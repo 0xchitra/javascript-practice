@@ -158,3 +158,37 @@ let marks = 87;
 let result = marks >= 40 ? "pass" : "fail";
 console.log(result);
 
+//Q29
+let username = null;
+let noUsername = (username = null ?? "guest");
+console.log(noUsername);
+
+//Q30
+console.log(`for 0 ==>`);
+console.log(0 || "default");
+console.log(0 ?? "default");
+console.log(`for "" ==>`);
+console.log("" || "default");
+console.log("" ?? "default");
+console.log("for false ==>");
+console.log(false || "default");
+console.log(false ?? "default");
+console.log("for null ==>");
+console.log(null || "default");
+console.log(null ?? "default");
+console.log("for undefined ==>");
+console.log(undefined || "default");
+console.log(undefined ?? "default");
+console.log("for true ==>");
+console.log(true || "default");
+console.log(true ?? "default");
+
+//Q31
+let userName = "";
+let displayName = userName || "guest";
+console.log(displayName);
+
+//Q32
+let userName2 = "";
+let displayName2 = userName2 ?? "guest";
+console.log(displayName2);
