@@ -192,3 +192,46 @@ console.log(displayName);
 let userName2 = "";
 let displayName2 = userName2 ?? "guest";
 console.log(displayName2);
+
+//Q33
+console.log(5 + 2 * 3); //11
+
+//Q34
+console.log((5 + 2) * 3); //21
+
+//35
+console.log(true || false && false); //treu
+
+//Q36
+console.log(!false && false); //false
+
+//Q37
+console.log("5" + 2); //5 is a string, 2 is a number
+
+//Q38
+console.log("5" - 2); //'-' operator cannot concatenate strings
+
+//Q39
+console.log(true + true); //true = 1, false = 0
+
+//bonus
+console.log(false + false);
+console.log(true + false);
+
+//Q40
+console.log(null == undefined); //true
+
+//Q41
+console.log(null === undefined); //false
+
+//Q42
+console.log([] == false); //'0' means false, so its true
+
+//Q43
+console.log("" == 0);// 0 == 0, true
+
+//Q44
+console.log("10" > 2); //both values are became string
+
+// '==' converts type if needed
+// '===' no type conversion like string to number
