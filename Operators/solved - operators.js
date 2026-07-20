@@ -130,3 +130,31 @@ if (isLoggedIn && isAdmin) {
   console.log("The user is not logged in or not an admin.");
 }
 
+//////////////////////////////////////////////////
+//<-ternary operator syntax->
+//
+// condition ? valueIfTrue : valueIfFalse;
+/////////////////////////////////////////////////
+
+//Q25
+let Age = 13;
+let isAdult = Age >= 18 ? "Adult" : "Minor";
+console.log(isAdult);
+
+//Q26
+let aNum = 39;
+let bNum = 44;
+let bigger = aNum > bNum ? `${aNum} is bigger` : `${bNum} is bigger`;
+console.log(bigger);
+
+//Q27
+let eNum = 33;
+let isEven =
+  eNum % 2 === 0 ? `${eNum} is an even number` : `${eNum} is an odd number`;
+console.log(isEven);
+
+//Q28
+let marks = 87;
+let result = marks >= 40 ? "pass" : "fail";
+console.log(result);
+
