@@ -266,3 +266,99 @@ console.log(5 << 2);
 //Q52
 console.log(20 >> 2);
 
+//Q53
+let varA = 6;
+let varB = 9;
+
+varA = varA + varB;
+varB = varA - varB;
+varA = varA - varB;
+console.log(varA, varB);
+
+//54
+let varC = 4;
+let varD = 7;
+varC = varC ^ varD;
+varD = varC ^ varD;
+varC = varC ^ varD;
+
+console.log(varC, varD);
+
+//Q55
+let numX = 33;
+console.log(numX % 3 === 0 && numX % 5 === 0);
+
+//Q56
+let year = 2024;
+if (year % 4 === 0) {
+  console.log("leap year");
+} else {
+  console.log("not leap year");
+}
+
+//57
+let mark = 80;
+
+let grade =
+  mark >= 90
+    ? "Grade A"
+    : mark >= 75
+      ? "grade B"
+      : mark >= 60
+        ? "grade C"
+        : "fail";
+
+console.log(grade);
+
+//58
+console.log(10 + "5" - 3 * 2); // 105 - 6
+
+//59
+console.log(1 < 2 < 3); //true
+
+//60
+//true = 1, false = 0
+console.log(3 > 2 > 1); //false, first 3>2 = true, then true>1 = false (1>1 = false)
+
+//61
+let no = 41;
+let isOdd = no % 2 === 0 ? "even" : "odd";
+console.log(isOdd);
+
+//62
+let no1 = 3;
+let no2 = 9;
+let no3 = 7;
+let maxNo =
+  no1 > no2
+    ? `${no1} is bigger`
+    : no2 > no3
+      ? `${no2} is bigger`
+      : `${no3} is bigger`;
+
+console.log(maxNo);
+
+//63
+let xa = 5;
+console.log(xa++ + ++xa); //12 , first xa = 5, then increase to 6, then xa = 7(pre-increment), so 5+7=12
+
+//64
+let aa = 10;
+let bb = aa++ + ++aa + --aa; //10 + 12 + 11 = 33
+console.log(aa, bb);
+
+//65
+let smallest = a < b ? a : b;
+console.log(smallest);
+
+//already solve in Q20
+//already solve in Q21
+//already solve in Q28
+
+// "5" == 5 is true
+// "5" === 5 is false
+// true || false returns true and stop immediately
+// "" ?? "guest" returns ""
+// true && "hello" returns "hello", returns the falsy value or the last truthy value
+// ? : shorthand for if...else
+
