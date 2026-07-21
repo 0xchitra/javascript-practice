@@ -1,0 +1,206 @@
+# JavaScript Conditional Statements Practice
+
+## 🟢 Beginner
+
+### Q1. Check if a number is positive.
+
+### Q2. Check if a number is negative.
+
+### Q3. Check if a number is zero.
+
+### Q4. Check whether a number is even or odd.
+
+### Q5. Check whether a person is eligible to vote (18+).
+
+### Q6. Check if a person is old enough to get a driving license (18+).
+
+### Q7. Find the greater number between two numbers.
+
+### Q8. Find the greatest among three numbers.
+
+### Q9. Check whether a year is a leap year.
+
+### Q10. Check whether a character is a vowel or a consonant.
+
+---
+
+# 🟡 Intermediate
+
+### Q11. Check if a number is divisible by both 3 and 5.
+
+### Q12. Check if a number is divisible by either 3 or 5.
+
+### Q13. Check whether a number lies between 10 and 50 (inclusive).
+
+### Q14. Check if a person gets a student discount.
+
+* Age must be under 25
+* Must have a student ID
+
+### Q15. Create a simple login check.
+
+* Correct username
+* Correct password
+
+### Q16. Assign grades based on marks.
+
+```
+90-100 → A
+80-89  → B
+70-79  → C
+60-69  → D
+Below 60 → F
+```
+
+### Q17. Check whether a number is a multiple of 7.
+
+### Q18. Check if a number is within the range 1–100.
+
+### Q19. Find the smallest among three numbers.
+
+### Q20. Check whether someone can watch an A-rated movie.
+
+* Age ≥18
+
+---
+
+# 🟠 Logical Operators
+
+### Q21. Check if someone qualifies for free delivery.
+
+* Order amount > 500 OR Premium member
+
+### Q22. Check if someone qualifies for a loan.
+
+* Age ≥21
+* Salary ≥30000
+
+### Q23. Check if someone can enter a club.
+
+* Age ≥18
+* Must have an ID
+
+### Q24. Check whether a user is an admin.
+
+### Q25. Check if a username is **not** empty.
+
+### Q26. Check if a number is positive and even.
+
+### Q27. Check whether a password is valid.
+
+* At least 8 characters
+
+---
+
+# 🔵 Nested if-else
+
+### Q28. ATM Withdrawal
+
+* Balance must be sufficient.
+* Withdrawal amount must be positive.
+
+### Q29. Online Shopping Discount
+
+```
+Purchase > 5000
+    Premium → 20%
+    Normal → 10%
+Otherwise
+    No discount
+```
+
+### Q30. Check admission eligibility.
+
+```
+Math >= 70
+Science >= 70
+English >= 60
+```
+
+Only if all conditions are satisfied, print **Eligible**.
+
+---
+
+# 🟣 Ternary Operator
+
+### Q31. Print `"Adult"` or `"Minor"` using the ternary operator.
+
+### Q32. Find the larger of two numbers using the ternary operator.
+
+### Q33. Print `"Even"` or `"Odd"` using the ternary operator.
+
+---
+
+# 🔴 Switch Statement
+
+### Q34. Print the day name based on numbers (1–7).
+
+### Q35. Print the month name based on numbers (1–12).
+
+### Q36. Build a simple calculator using `switch`.
+
+Supported operators:
+
+* +
+* *
+* *
+* /
+
+### Q37. Print a traffic signal instruction.
+
+```
+Red
+Yellow
+Green
+```
+
+---
+
+# ⚫ Challenge
+
+### Q38. Determine ticket price.
+
+```
+Age < 5 → Free
+5–17 → ₹100
+18–59 → ₹200
+60+ → ₹150
+```
+
+### Q39. Electricity Bill
+
+```
+Units ≤100 → ₹5/unit
+101–200 → ₹7/unit
+Above 200 → ₹10/unit
+```
+
+Calculate the total bill.
+
+### Q40. FizzBuzz (Conditionals Version)
+
+Print:
+
+* `"Fizz"` if divisible by 3
+* `"Buzz"` if divisible by 5
+* `"FizzBuzz"` if divisible by both
+* Otherwise print the number
+
+---
+
+## ✅ Topics Covered
+
+By solving these 40 questions, a learner will understand:
+
+* `if`
+* `else`
+* `else if`
+* Nested `if`
+* Comparison operators (`>`, `<`, `>=`, `<=`, `===`, `!==`)
+* Logical operators (`&&`, `||`, `!`)
+* Truthy vs Falsy values (through practical checks)
+* Range checking
+* Multiple condition handling
+* Ternary operator (`condition ? a : b`)
+* `switch` statement
+* Decision-making in real-world scenarios (login, ATM, discounts, ticket pricing, billing, etc.)
