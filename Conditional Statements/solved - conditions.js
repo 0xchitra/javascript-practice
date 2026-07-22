@@ -272,3 +272,17 @@ if (eligibleMark >= 70) {
 }
 
 //31
+let checkAge = 22;
+checkAge = checkAge >= 18 ? "adult" : "minor";
+console.log(checkAge);
+
+//32
+let no1 = 22;
+let no2 = 19;
+larger = no1 > no2 ? `${no1} is larger` : `${no2} is larger`;
+console.log(larger);
+
+//33
+let no3 = 22;
+isEven = no3 % 2 === 0 ? "even" : "odd";
+console.log(isEven);
