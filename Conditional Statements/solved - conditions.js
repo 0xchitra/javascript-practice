@@ -182,3 +182,61 @@ if (isAge >= 18) {
 } else {
   console.log("you cannot watch the movie");
 }
+
+//21
+let totalPrice = 600;
+let premiumMember = true;
+if (totalPrice >= 500 || premiumMember === true) {
+  console.log("eligible for free delivery");
+} else {
+  console.log("shop 500 worth of items to get free delivery");
+}
+
+//22
+let requiredAge = 21;
+let salary = 45000;
+if (requiredAge >= 21 && salary >= 30000) {
+  console.log("eligible for loan");
+} else {
+  console.log("not eligible for loan");
+}
+
+//23
+let personAge = 20;
+let id = true;
+if (personAge >= 18 && id === true) {
+  console.log("can enter a club");
+} else {
+  console.log("cannot enter a club");
+}
+
+//24
+let role = "user";
+if (role === "admin") {
+  console.log("access granted");
+} else {
+  console.log("acces denied");
+}
+
+//25
+let reqUsername = "";
+if (reqUsername.trim() !== "") {
+  console.log(`welcome ${reqUsername}`);
+} else {
+  console.log(" username cannot be empty");
+}
+
+//26
+let number = 24;
+if (number % 2 === 0 && number >= 0) {
+  console.log("the number is both positive and even");
+} else {
+  console.log("the number is neither positive nor even");
+}
+
+//27
+let passWord = "1234567";
+if (passWord.length <= 7) {
+  console.log("invalid password");
+}
+
