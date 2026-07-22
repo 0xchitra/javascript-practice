@@ -240,3 +240,35 @@ if (passWord.length <= 7) {
   console.log("invalid password");
 }
 
+//28
+let withdrawalCash = 11000;
+let balance = 10000;
+if (withdrawalCash > balance) {
+  console.log("insufficient bank balance");
+} else if (withdrawalCash <= 0) {
+  console.log("amount must be positive and greater than zero");
+} else {
+  console.log("withdrawal being process");
+}
+
+//29
+let amount = 4000;
+if (amount >= 5000) {
+  console.log("eligible for 20% discount");
+} else if (amount >= 3000) {
+  console.log("eligible for 10% discount");
+} else {
+  console.log("no discount");
+}
+
+//30
+let eligibleMark = 78;
+if (eligibleMark >= 70) {
+  console.log("you are eligible for admission in both math and science");
+} else if (mark >= 60) {
+  console.log("you are eligible for admission in english");
+} else {
+  console.log("not eligible for admission");
+}
+
+//31

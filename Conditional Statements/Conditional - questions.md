@@ -104,6 +104,7 @@ Below 60 → F
 ```
 Purchase > 5000
     Premium → 20%
+Purchase > 3000
     Normal → 10%
 Otherwise
     No discount
