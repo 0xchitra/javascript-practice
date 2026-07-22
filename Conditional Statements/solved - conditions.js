@@ -369,3 +369,34 @@ if (light === "red") {
   console.log("go");
 }
 
+//38
+let ageT = 5;
+if (ageT <= 5) {
+  console.log("free ticket");
+} else if (ageT <= 17) {
+  console.log("100 for each ticket");
+} else if (ageT <= 59) {
+  console.log("200 for each ticket");
+} else if (ageT >= 60) {
+  console.log("150 for each ticket");
+}
+
+//39
+let eBill = 177;
+if (eBill <= 100) {
+  console.log(eBill * 5);
+} else if (eBill <= 200) {
+  console.log(eBill * 7);
+} else if (eBill > 200) {
+  console.log(eBill * 10);
+}
+
+//40
+let numN = 45;
+if (numN % 3 === 0 && numN % 5 === 0) {
+  console.log("FizzBuzz");
+} else if (numN % 3 === 0) {
+  console.log("Fizz");
+} else if (numN % 5 === 0) {
+  console.log("Buzz");
+}
