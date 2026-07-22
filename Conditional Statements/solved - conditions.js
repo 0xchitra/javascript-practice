@@ -286,3 +286,86 @@ console.log(larger);
 let no3 = 22;
 isEven = no3 % 2 === 0 ? "even" : "odd";
 console.log(isEven);
+
+//34
+let day = 2;
+if (day === 1) {
+  console.log("monday");
+} else if (day === 2) {
+  console.log("tuesday");
+} else if (day === 3) {
+  console.log("wednesday");
+} else if (day === 4) {
+  console.log("thursday");
+} else if (day === 5) {
+  console.log("friday");
+} else if (day === 6) {
+  console.log("saturday");
+} else if (day === 7) {
+  console.log("sunday");
+}
+
+//35
+let month = 2;
+if (month === 1) {
+  console.log("january");
+} else if (month === 2) {
+  console.log("february");
+} else if (month === 3) {
+  console.log("march");
+} else if (month === 4) {
+  console.log("april");
+} else if (month === 5) {
+  console.log("may");
+} else if (month === 6) {
+  console.log("june");
+} else if (month === 7) {
+  console.log("july");
+} else if (month === 8) {
+  console.log("august");
+} else if (month === 9) {
+  console.log("september");
+} else if (month === 10) {
+  console.log("october");
+} else if (month === 11) {
+  console.log("november");
+} else if (month === 12) {
+  console.log("december");
+}
+
+//36
+let firstNumber = 23;
+let secondNumber = 19;
+let operator = "+";
+
+switch (operator) {
+  case "+":
+    console.log(firstNumber + secondNumber);
+    break;
+  case "-":
+    console.log(firstNumber - secondNumber);
+    break;
+  case "*":
+    console.log(firstNumber * secondNumber);
+    break;
+  case "/":
+    if (secondNumber === 0) {
+      console.log("cannot divide by 0");
+    } else {
+      console.log(firstNumber / secondNumber);
+    }
+    break;
+  default:
+    console.log("invalid operator");
+}
+
+//37
+let light = "red";
+if (light === "red") {
+  console.log("stop");
+} else if (light === "yellow") {
+  console.log("wait");
+} else if (light === "green") {
+  console.log("go");
+}
+

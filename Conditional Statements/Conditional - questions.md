@@ -142,10 +142,10 @@ Only if all conditions are satisfied, print **Eligible**.
 
 Supported operators:
 
-* +
-* *
-* *
-* /
+* ` + `
+* `-`
+* `*`
+* `/`
 
 ### Q37. Print a traffic signal instruction.
 
