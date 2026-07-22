@@ -92,3 +92,93 @@ if (
 } else {
   console.log("the character is not a vowel");
 }
+
+//Q11
+let numD = 54;
+if (numD % 3 === 0 && numD % 5 === 0) {
+  console.log("divisible by both 3 and 5");
+} else {
+  console.log("not divisible by both 3 and 5");
+}
+
+//Q12
+let numE = 54;
+if (numE % 3 === 0 || numE % 5 === 0) {
+  console.log("divisible by either 3 or 5");
+} else {
+  console.log("not divisible by both 3 and 5");
+}
+
+//Q13
+let numF = 23;
+if (numF <= 50 && numF >= 10) {
+  console.log("lies between 10 and 50");
+} else {
+  console.log("doesn't lie between 10 and 50");
+}
+
+//14
+let ageStudent = 22;
+let idStudent = true;
+if (ageStudent <= 25 && idStudent === true) {
+  console.log("eligible for student discount");
+} else {
+  console.log("not eligible for student discount");
+}
+
+//15
+let userName = "chitra20";
+let pass = "HelloWorld31?";
+if (userName === "chitra20" && pass === "HelloWorld31?") {
+  console.log("welcome back to your account");
+} else {
+  console.log("invalid username or password");
+}
+
+//Q16
+let mark = 87;
+if (mark >= 90) {
+  console.log("grade A");
+} else if (mark >= 80) {
+  console.log("grade B");
+} else if (mark >= 70) {
+  console.log("grade C");
+} else if (mark >= 60) {
+  console.log("grade D");
+} else {
+  console.log("grade F");
+}
+
+//Q17
+let numG = 49;
+if (numG % 7 === 0) {
+  console.log(`${numG} is multiple of 7`);
+}
+
+//Q18
+let numH = 23;
+if (numH <= 100 && numH >= 1) {
+  console.log("number is within 1 and 100");
+} else {
+  console.log("number is not within 1 and 100");
+}
+
+//Q19
+let noA = 26;
+let noB = 22;
+let noC = 20;
+if (noA < noB) {
+  console.log(`${noA} is smallest`);
+} else if (noB < noC) {
+  console.log(`${noB} is smallest`);
+} else {
+  console.log(`${noC} is smallest`);
+}
+
+//20
+let isAge = 17;
+if (isAge >= 18) {
+  console.log("you can watch the movie");
+} else {
+  console.log("you cannot watch the movie");
+}
