@@ -1,3 +1,6 @@
+// when you know the upper limit use `for loop`
+// when you dont the the upper limit use `while loop`
+
 //Q1
 for (i = 1; i <= 10; i++) {
   console.log(i);
@@ -67,3 +70,100 @@ for (i = 1; i <= 20; i++) {
     console.log(i);
   }
 }
+
+//11
+let countNums3 = 0;
+for (i = 1; i <= 100; i++) {
+  if (i % 3 === 0) countNums3++;
+}
+console.log(countNums3);
+
+//12
+let countNums35 = 0;
+for (i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) countNums35++;
+}
+console.log(countNums35);
+
+//13
+let givenStr = "hello";
+let reversedStr = "";
+for (i = givenStr.length - 1; i >= 0; i--) reversedStr += givenStr[i];
+console.log(reversedStr);
+
+//14
+let vStr = "ehey i am chitra";
+let countVowel = 0;
+for (i = 0; i <= vStr.length - 1; i++) {
+  if (
+    vStr[i] === "a" ||
+    vStr[i] === "e" ||
+    vStr[i] === "i" ||
+    vStr[i] === "o" ||
+    vStr[i] === "u"
+  )
+    countVowel++;
+}
+console.log(countVowel);
+
+//15
+let nums = 1234567;
+let countDigit = 0;
+while (nums > 0) {
+  nums % 10;
+  countDigit++;
+  nums = Math.floor(nums / 10);
+}
+console.log(countDigit);
+
+//16 Reverse a nunmber
+let num2 = 12345;
+let rNumber = 0;
+while (num2 > 0) {
+  let rnum = num2 % 10;
+  rNumber = rNumber * 10 + rnum;
+  num2 = Math.floor(num2 / 10);
+}
+console.log(rNumber);
+
+//17 if number is palindrome
+let num3 = 12321;
+let originalNum3 = num3;
+let revNumber = 0;
+while (num3 > 0) {
+  let rNum = num3 % 10;
+  revNumber = revNumber * 10 + rNum;
+  num3 = Math.floor(num3 / 10);
+}
+if (originalNum3 === revNumber) {
+  console.log("number is palindrome");
+} else {
+  console.log("not palindrome");
+}
+
+//18 factorial
+let inNumber = 5;
+let factorial = 1;
+for (i = 1; i <= inNumber; i++) {
+  factorial = factorial * i;
+}
+console.log(factorial);
+
+//19
+let realNumber = 2;
+let powerNumber = 5;
+let outPut = 1;
+for (i = 1; i <= powerNumber; i++) {
+  outPut = outPut * realNumber;
+}
+console.log(outPut);
+
+//20
+let inputNumber = 16954378;
+let largest = 0;
+while (inputNumber > 0) {
+  let lastDigit = inputNumber % 10;
+  if (lastDigit > largest) largest = lastDigit;
+  inputNumber = Math.floor(inputNumber / 10);
+}
+console.log(largest);
