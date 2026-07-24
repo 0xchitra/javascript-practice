@@ -24,4 +24,4 @@ Whether you're just starting or revising JavaScript fundamentals, this repositor
 - ES6+
 - Async JavaScript
 
-Happy coding coders! 🚀
+Happy coding! 🚀
