@@ -2,44 +2,44 @@
 // when you dont the the upper limit use `while loop`
 
 //Q1
-for (i = 1; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
 
 //2
-for (i = 10; i >= 1; i--) {
+for (let i = 10; i >= 1; i--) {
   console.log(i);
 }
 
 //Q3. all even numbers from 1 - 50
-for (i = 1; i <= 50; i++) {
+for (let i = 1; i <= 50; i++) {
   if (i % 2 === 0) {
     console.log(i);
   }
 }
 
 //Q4. all odd numbers
-for (i = 1; i <= 50; i++) {
+for (let i = 1; i <= 50; i++) {
   if (i % 2 !== 0) {
     console.log(i);
   }
 }
 
 //Q5
-for (i = 1; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {
   console.log(`7 x ${i} = ${7 * i}`);
 }
 
 //Q6
 let sum = 0;
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
   sum = sum + i;
 }
 console.log(sum);
 
 //Q7
 let evenSum = 0;
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
   if (i % 2 == 0) {
     evenSum = evenSum + i;
   }
@@ -48,7 +48,7 @@ console.log(evenSum);
 
 //Q8
 let oddSum = 0;
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
   if (i % 2 !== 0) {
     oddSum = oddSum + i;
   }
@@ -56,7 +56,7 @@ for (i = 1; i <= 100; i++) {
 console.log(oddSum);
 
 //Q9
-for (i = 1; i <= 20; i++) {
+for (let i = 1; i <= 20; i++) {
   if (i === 10) continue;
   else {
     console.log(i);
@@ -64,7 +64,7 @@ for (i = 1; i <= 20; i++) {
 }
 
 //10
-for (i = 1; i <= 20; i++) {
+for (let i = 1; i <= 20; i++) {
   if (i === 16) break;
   else {
     console.log(i);
@@ -73,14 +73,14 @@ for (i = 1; i <= 20; i++) {
 
 //11
 let countNums3 = 0;
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
   if (i % 3 === 0) countNums3++;
 }
 console.log(countNums3);
 
 //12
 let countNums35 = 0;
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
   if (i % 3 === 0 && i % 5 === 0) countNums35++;
 }
 console.log(countNums35);
@@ -88,13 +88,13 @@ console.log(countNums35);
 //13
 let givenStr = "hello";
 let reversedStr = "";
-for (i = givenStr.length - 1; i >= 0; i--) reversedStr += givenStr[i];
+for (let i = givenStr.length - 1; i >= 0; i--) reversedStr += givenStr[i];
 console.log(reversedStr);
 
 //14
 let vStr = "ehey i am chitra";
 let countVowel = 0;
-for (i = 0; i <= vStr.length - 1; i++) {
+for (let i = 0; i <= vStr.length - 1; i++) {
   if (
     vStr[i] === "a" ||
     vStr[i] === "e" ||
@@ -144,7 +144,7 @@ if (originalNum3 === revNumber) {
 //18 factorial
 let inNumber = 5;
 let factorial = 1;
-for (i = 1; i <= inNumber; i++) {
+for (let i = 1; i <= inNumber; i++) {
   factorial = factorial * i;
 }
 console.log(factorial);
@@ -153,7 +153,7 @@ console.log(factorial);
 let realNumber = 2;
 let powerNumber = 5;
 let outPut = 1;
-for (i = 1; i <= powerNumber; i++) {
+for (let i = 1; i <= powerNumber; i++) {
   outPut = outPut * realNumber;
 }
 console.log(outPut);
@@ -167,3 +167,122 @@ while (inputNumber > 0) {
   inputNumber = Math.floor(inputNumber / 10);
 }
 console.log(largest);
+
+//21
+for (let i = 1; i <= 5; i++) {
+  let stars = "";
+  for (let j = 1; j <= i; j++) {
+    stars = stars + "*";
+  }
+  console.log(stars);
+}
+
+//22
+for (let i = 5; i >= 0; i--) {
+  let stars = "";
+  for (let j = 1; j <= i; j++) {
+    stars = stars + "*";
+  }
+  console.log(stars);
+}
+
+//23
+for (let i = 1; i <= 5; i++) {
+  let pattern = "";
+  for (let j = 1; j <= i; j++) {
+    pattern = pattern + [j];
+  }
+  console.log(pattern);
+}
+
+//24
+for (let i = 5; i >= 0; i--) {
+  let pattern = "";
+  for (let j = 1; j <= i; j++) {
+    pattern = pattern + [j];
+  }
+  console.log(pattern);
+}
+
+//25
+for (let i = 1; i <= 5; i++) {
+  let stars = "";
+  for (j = 1; j <= 5 - i; j++) {
+    //add spaces
+    stars += " ";
+  }
+  for (j = 1; j <= i; j++) {
+    //add *
+    stars += "*";
+  }
+  console.log(stars);
+}
+
+//26
+for (let i = 1; i <= 5; i++) {
+  let stars = "";
+  for (j = 1; j <= 5 - i; j++) {
+    //add spaces
+    stars += " ";
+  }
+  for (j = 1; j <= 2 * i - 1; j++) {
+    //add *
+    stars += "*";
+  }
+  console.log(stars);
+}
+
+//27
+let num = 1;
+
+for (let i = 1; i <= 4; i++) {
+  let row = "";
+  for (let j = 1; j <= i; j++) {
+    row += num + " ";
+    num++;
+  }
+  console.log(row);
+}
+
+//28
+for (let i = 2; i <= 10; i++) {
+  for (let j = 1; j <= 10; j++) {
+    console.log(`${i} x ${j} = ${i * j}`);
+  }
+  console.log("");
+}
+
+//29
+for (let i = 2; i <= 100; i++) {
+  let isPrime = true;
+
+  for (let j = 2; j < i; j++) {
+    if (i % j === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log(i);
+  }
+}
+
+//30
+let isNum = 17;
+let isPrime = true;
+
+if (isNum < 2) {
+  isPrime = false;
+} else {
+  for (let i = 2; i < isNum; i++) {
+    if (isNum % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+}
+if (isPrime) {
+  console.log("Prime");
+} else {
+  console.log("Not Prime");
+}
