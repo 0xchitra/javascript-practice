@@ -286,3 +286,144 @@ if (isPrime) {
 } else {
   console.log("Not Prime");
 }
+
+//31 10 fibonacci number
+let a = 0;
+let b = 1;
+
+console.log(a);
+console.log(b);
+
+for (let i = 3; i <= 10; i++) {
+  let next = a + b;
+  console.log(next);
+  a = b;
+  b = next;
+}
+
+//32
+let aa = 0;
+let bb = 1;
+
+while (aa < 1000) {
+  console.log(aa);
+  let next = aa + bb;
+  aa = bb;
+  bb = next;
+}
+
+//33 GCD
+let fristNum = 20;
+let secondNum = 30;
+let gcd = 1;
+
+for (let i = 1; i <= fristNum && i <= secondNum; i++) {
+  if (fristNum % i === 0 && secondNum % i === 0) {
+    gcd = i;
+  }
+}
+console.log(gcd);
+
+//34 LCM
+let numL = 12;
+let numC = 18;
+let numLTable = 1;
+let numCTable = 1;
+let lcm;
+
+for (let i = numL > numC ? numL : numC; ; i++) {
+  if (i % numL === 0 && i % numC === 0) {
+    lcm = i;
+    break;
+  }
+}
+console.log(lcm);
+
+//35 factors
+let givenNum = 12;
+for (let i = 1; i <= 12; i++) {
+  if (givenNum % i === 0) {
+    console.log(i);
+  }
+}
+
+//36
+let num36 = 28;
+let sum36 = 0;
+
+for (let i = 1; i < num36; i++) {
+  if (num36 % i === 0) {
+    sum36 += i;
+  }
+}
+
+if (sum36 === num36) {
+  console.log("Perfect Number");
+} else {
+  console.log("Not a Perfect Number");
+}
+
+//37
+let num37 = 153;
+let sum37 = 0;
+let original = num37;
+
+while (num37 > 0) {
+  let digit = num37 % 10;
+  sum37 += digit ** 3;
+  num37 = Math.floor(num37 / 10);
+}
+
+if (sum37 === original) {
+  console.log("Armstrong Number");
+} else {
+  console.log("Not an Armstrong Number");
+}
+
+//38
+for (let i = 1; i <= 1000; i++) {
+  let num = i;
+  let sum = 0;
+
+  while (num > 0) {
+    let digit = num % 10;
+    sum += digit ** 3;
+    num = Math.floor(num / 10);
+  }
+
+  if (sum === i) {
+    console.log(i);
+  }
+}
+
+//39
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
+
+//40
+// const readline = require("readline-sync");
+
+// let secret = 7;
+// let attempts = 0;
+// let guess;
+
+// do {
+//   guess = Number(readline("Enter your guess:"));
+//   attempts++;
+
+//   if (guess < secret) {
+//     console.log("Too Low");
+//   } else if (guess > secret) {
+//     console.log("Too High");
+//   }
+// } while (guess !== secret);
+// console.log(`Correct! You guessed it in ${attempts} attempts.`);
