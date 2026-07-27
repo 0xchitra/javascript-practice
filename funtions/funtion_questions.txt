@@ -1,0 +1,267 @@
+# JavaScript Functions Practice (Beginner → Pro)
+
+🟢 Beginner
+
+Q1. What is a function? Why do we use functions?
+
+Q2. Create a function named `greet` that prints `"Hello, World!"`.
+
+Q3. Call the `greet()` function three times.
+
+Q4. Create a function that prints your name.
+
+Q5. Create a function that accepts a name as a parameter and greets that person.
+
+Example:
+Hello, Chitra
+
+Q6. Create a function that adds two numbers.
+
+Example:
+add(5, 7)
+Output: 12
+
+Q7. Create a function that subtracts two numbers.
+
+Q8. Create a function that multiplies two numbers.
+
+Q9. Create a function that divides two numbers.
+
+Q10. Create a function that returns the square of a number.
+
+---
+
+🟡 Parameters & Return
+
+Q11. What's the difference between:
+
+* printing a value
+* returning a value
+
+Explain using code.
+
+Q12. Create a function that returns the cube of a number.
+
+Q13. Create a function that returns whether a number is even.
+
+Q14. Create a function that returns whether a number is odd.
+
+Q15. Create a function that returns the largest of two numbers.
+
+Q16. Create a function that returns the largest of three numbers.
+
+Q17. Create a function that returns the smallest number in an array.
+
+Q18. Create a function that returns the largest number in an array.
+
+Q19. Create a function that counts vowels in a string.
+
+Q20. Create a function that reverses a string.
+
+---
+
+🟠 Function Expressions
+
+Q21. Convert this function declaration into a function expression.
+
+Q22. Store a function inside a variable and call it.
+
+Q23. Can you call a function expression before it is declared? Why?
+
+Q24. Difference between:
+
+* Function Declaration
+* Function Expression
+
+---
+
+🔵 Arrow Functions
+
+Q25. Convert a normal function into an arrow function.
+
+Q26. Write an arrow function that returns the square of a number.
+
+Q27. Write an arrow function that checks if a number is prime.
+
+Q28. When can arrow functions omit:
+
+* parentheses
+* curly braces
+* return
+
+Q29. Why doesn't `this` work the same inside an arrow function?
+
+---
+
+🟣 Default Parameters
+
+Q30. Create a function:
+greet(name = "Guest")
+
+Q31. Create a calculator function using default parameters.
+
+---
+
+🟤 Rest Parameters
+
+Q32. Create a function that adds any number of values.
+
+Example:
+sum(1,2,3,4,5)
+
+
+Q33. Create a function that finds the maximum among unlimited numbers.
+
+Q34. Difference between:
+
+* Rest (...)
+* Spread (...)
+
+---
+
+🔴 Scope
+
+Q35. Difference between:
+
+* Global Scope
+* Function Scope
+* Block Scope
+
+Q36. Predict the output.
+
+let x = 10;
+
+function test() {
+    let x = 20;
+    console.log(x);
+}
+
+console.log(x);
+test();
+console.log(x);
+
+
+Q37. Can a function access variables outside itself? Explain.
+
+Q38. Can code outside a function access variables declared inside the function?
+
+---
+
+🟢 Callback Functions
+
+Q39. What is a callback function?
+
+Q40. Create a function that accepts another function as an argument.
+
+Q41. Write your own version of:
+
+forEach()
+
+using callbacks.
+
+---
+
+🟡 Recursion
+
+Q42. What is recursion?
+
+Q43. Find factorial using recursion.
+
+Q44. Print numbers from 1 to N using recursion.
+
+Q45. Find the sum of digits using recursion.
+
+---
+
+🔵 Higher-Order Functions
+
+Q46. What is a Higher-Order Function?
+
+Q47. Create your own `map()` function.
+
+Q48. Create your own `filter()` function.
+
+Q49. Create your own `find()` function.
+
+Q50. Create your own `reduce()` function.
+
+---
+
+⭐ Bonus Challenge
+
+Q51. Build a mini calculator using functions.
+
+Operations:
+
+* Add
+* Subtract
+* Multiply
+* Divide
+* Modulus
+* Power
+
+Q52. Build a simple ATM system using functions.
+
+Features:
+
+* Check Balance
+* Deposit
+* Withdraw
+
+Q53. Build a Student Grade System using functions.
+
+Input:
+
+
+marks
+
+
+Output:
+
+
+Grade
+Pass/Fail
+Percentage
+
+
+Q54. Build a Number Utility Library.
+
+Functions:
+
+* isPrime()
+* isEven()
+* isOdd()
+* factorial()
+* fibonacci()
+* reverseNumber()
+* palindrome()
+* armstrong()
+* gcd()
+* lcm()
+
+---
+
+📚 Concepts Covered
+
+By completing these questions, learners will practice:
+
+* ✅ Function declaration
+* ✅ Function invocation
+* ✅ Parameters
+* ✅ Arguments
+* ✅ Return values
+* ✅ Function expressions
+* ✅ Arrow functions
+* ✅ Default parameters
+* ✅ Rest parameters
+* ✅ Spread vs Rest
+* ✅ Scope (Global, Function, Block)
+* ✅ Hoisting
+* ✅ Callbacks
+* ✅ Recursion
+* ✅ Higher-order functions
+* ✅ Closures (introduced through callbacks and scope)
+* ✅ Building reusable utilities
+* ✅ Real-world mini projects
+
+This progression is suitable for beginners while leading them toward the function concepts commonly tested in interviews and used in real-world JavaScript.
