@@ -180,3 +180,50 @@ console.log(multiply(4, 5));
 //24
 // Function Declaration -> The function itself is hoisted, so you can call it before its definition.
 // Function Expression -> The function is stored in a variable, so you can only call it after that variable has been initialized. This distinction is a direct consequence of JavaScript's hoisting behavior.
+
+//25
+let sayName = (name) => {
+  console.log(name);
+};
+sayName("chitra");
+
+//26
+let squaree = (val) => {
+  return val * val;
+};
+console.log(squaree(5));
+
+//27
+let isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(isPrime(9)); // true
+console.log(isPrime(2)); // false
+
+//28
+let squar = x => x * x; //If there is exactly one parameter, parentheses are optional.
+
+let double = x => x * 2; //You can omit {} only if the function has a single expression.
+
+let addd = (a, b) => a + b; //If braces are omitted, the expression is returned automatically (called an implicit return). If you use braces, you must write return.
+
+//29
+const person = {
+  name: "Chitra",
+
+  greet: () => {
+    console.log(this.name);
+  }
+};
+
+person.greet(); //output: undefined, cause arrow functions do not create their own this. Instead, they inherit this from the surrounding (lexical) scope.
