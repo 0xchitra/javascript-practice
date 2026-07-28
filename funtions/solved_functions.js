@@ -156,3 +156,27 @@ function reverseString(str) {
   return reverse;
 }
 console.log(reverseString("chitra"));
+
+//21
+let greett = function (name) {
+  return `Hello, ${name}!`;
+};
+
+console.log(greett("Chitra"));
+
+//22
+let multiply = function (a, b) {
+  return a * b;
+};
+console.log(multiply(4, 5));
+
+//23
+// sayHello(); //ReferenceError: Cannot access 'sayHello' before initialization
+
+// let sayHello = function() {
+//   console.log("hello");
+// };
+
+//24
+// Function Declaration -> The function itself is hoisted, so you can call it before its definition.
+// Function Expression -> The function is stored in a variable, so you can only call it after that variable has been initialized. This distinction is a direct consequence of JavaScript's hoisting behavior.

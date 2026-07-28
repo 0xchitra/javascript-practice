@@ -63,6 +63,9 @@ Q20. Create a function that reverses a string.
 🟠 Function Expressions
 
 Q21. Convert this function declaration into a function expression.
+function greet(name) {
+  return `Hello, ${name}!`;
+}
 
 Q22. Store a function inside a variable and call it.
 

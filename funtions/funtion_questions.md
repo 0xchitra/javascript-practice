@@ -69,6 +69,11 @@ Explain using code.
 ## 🟠 Function Expressions
 
 ### Q21. Convert this function declaration into a function expression.
+```js
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+```
 
 ### Q22. Store a function inside a variable and call it.
 
