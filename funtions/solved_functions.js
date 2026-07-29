@@ -313,3 +313,47 @@ a function can access variable declared in global scope.
 console.log`
 variable declared inside a function are cannot be access from outside the function
 `;
+
+//39
+console.log`
+A callback function is simply a function passed as an argument to another function, so it can be called later.
+`;
+
+//40
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+function processUser(callback) {
+  callback("Chitra");
+}
+
+processUser(greet); //output: Hello, Chitra!
+
+function calculate(a, b, operation) {
+  return operation(a, b);
+}
+
+function add(x, y) {
+  return x + y;
+}
+
+function multiplyy(x, y) {
+  return x * y;
+}
+
+console.log(calculate(5, 3, add));      // 8
+console.log(calculate(5, 3, multiply)); // 15
+
+//41
+function myForEach(arr, callB) {
+  for (let i = 0; i < arr.length; i++) {
+    callB(arr[i]);
+  }
+}
+
+const numbers = [11, 22, 33];
+
+myForEach(numbers, function (num) {
+  console.log(num);
+});
