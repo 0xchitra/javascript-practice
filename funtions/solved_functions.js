@@ -384,7 +384,76 @@ function sumOfDigits(num) {
   if (num === 0) {
     return 0;
   }
-  return (num % 10) +
-  sumOfDigits(Math.floor(num / 10));
+  return (num % 10) + sumOfDigits(Math.floor(num / 10));
 }
 console.log(sumOfDigits(12345));
+
+//46 high order function is a function that does atleast i) accept another function as argument, ii) returns another function
+
+//47
+function myMap(arr, callback) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(callback(arr[i], i, arr));
+  }
+  return result;
+}
+
+let numbss = [1, 2, 3];
+let doubled = myMap(numbss, function (num) {
+  return num * 2;
+});
+
+console.log(doubled);
+
+//48
+function myFilter(arr, callback) {
+  let reslt = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i], i, arr)) {
+      reslt.push(arr[i]);
+    }
+  }
+  return reslt;
+}
+
+let numbs = [1, 2, 3, 4, 5];
+let even = myFilter(numbs, function (num) {
+  return num % 2 === 0;
+});
+
+console.log(even);
+
+//49
+function myFind(arr, callback) {
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i], i, arr)) {
+      return arr[i];
+    }
+  }
+  return undefined;
+}
+
+let numbr = [10, 15, 20, 25, 30];
+let resultt = myFind(numbr, function (num) {
+  return num > 18;
+});
+
+console.log(resultt);
+
+//50
+function myReduce(arr, callback, initialValue) {
+  let accumulator = initialValue;
+
+  for (let i = 0; i < arr.length; i++) {
+    accumulator = callback(accumulator, arr[i], i, arr);
+  }
+  return accumulator;
+}
+
+let numbrs = [1, 2, 3, 4];
+let sum = myReduce(numbrs, function (acc, num) {
+  return acc + num;
+}, 0);
+
+console.log(sum);

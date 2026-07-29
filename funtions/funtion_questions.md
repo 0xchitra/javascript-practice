@@ -244,22 +244,6 @@ Grade
 Pass/Fail
 Percentage
 ```
-
-### Q54. Build a Number Utility Library.
-
-Functions:
-
-* isPrime()
-* isEven()
-* isOdd()
-* factorial()
-* fibonacci()
-* reverseNumber()
-* palindrome()
-* armstrong()
-* gcd()
-* lcm()
-
 ---
 
 ## 📚 Concepts Covered
