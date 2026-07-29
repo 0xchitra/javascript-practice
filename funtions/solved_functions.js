@@ -275,13 +275,41 @@ function maxNumber(...numbers) {
   }
   return max;
 }
-console.log(maxNumber(2, 4, 6, 2, 8, 1,9, 1, 8, 0, 6));
+console.log(maxNumber(2, 4, 6, 2, 8, 1, 9, 1, 8, 0, 6));
 
 //34
 function restExample(...numbers) {} //this is rest example
 
-let examples = [1,2,3,4,5] 
-console.log(...examples) //this is spread example
+let examples = [1, 2, 3, 4, 5];
+console.log(...examples); //this is spread example
 
 // rest(...) = collects value into a Array
 // spread(...) = expands an array into individual values
+
+//35
+console.log`
+global scope = variable declared outside of any functions, block, can be call anywhere in the code base.
+function scope = variable inside a functoin, can be called within that function'
+block scope = variable inside a block '{}', can be access within that block
+`;
+
+//36
+let x = 10;
+
+function test() {
+  let x = 20;
+  console.log(x);
+}
+
+console.log(x); //output: 10, global scope
+test(); //output: 20, function scope
+console.log(x); //output: 10, global scope && 'console.log' does not modify the variable
+
+//37
+console.log`
+a function can access variable declared in global scope.
+`;
+//38
+console.log`
+variable declared inside a function are cannot be access from outside the function
+`;
