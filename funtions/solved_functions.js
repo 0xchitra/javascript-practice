@@ -254,3 +254,34 @@ function calculator(a = 0, b = 0, operator = "+") {
 }
 
 console.log(calculator(3, 2, "/"));
+
+//32
+function sumOfNumbers(...numbers) {
+  let sum = 0;
+  for (let i = 0; i <= numbers.length - 1; i++) {
+    sum = sum + numbers[i];
+  }
+  return sum;
+}
+console.log(sumOfNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+//33
+function maxNumber(...numbers) {
+  let max = 0;
+  for (let i = 0; i <= numbers.length - 1; i++) {
+    if (max < numbers[i]) {
+      max = numbers[i];
+    } else continue;
+  }
+  return max;
+}
+console.log(maxNumber(2, 4, 6, 2, 8, 1,9, 1, 8, 0, 6));
+
+//34
+function restExample(...numbers) {} //this is rest example
+
+let examples = [1,2,3,4,5] 
+console.log(...examples) //this is spread example
+
+// rest(...) = collects value into a Array
+// spread(...) = expands an array into individual values
