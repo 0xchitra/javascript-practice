@@ -1,0 +1,187 @@
+# JavaScript Strings Practice (45 Questions)
+
+## 🟢 Beginner (1–10)
+
+### Q1. Create a string variable containing your name and print it.
+### Q2. Find the length of a string without counting manually.
+### Q3. Print the first character of a string.
+### Q4. Print the last character of a string.
+### Q5. Convert a string to uppercase.
+### Q6. Convert a string to lowercase.
+### Q7. Check whether two strings are equal.
+### Q8. Concatenate two strings using:
+* `+`
+* `concat()`
+* Template literals
+
+### Q9. Access every character of a string using a loop.
+### Q10. Reverse a string without using `Array.reverse()`.
+
+---
+
+# 🟡 Basic Methods (11–20)
+
+### Q11. Count how many vowels are present in a string.
+### Q12. Count how many consonants are present.
+### Q13. Check whether a string contains a particular word.
+### Q14. Find the index of the first occurrence of a character.
+### Q15. Find the index of the last occurrence of a character.
+### Q16. Replace one word with another.
+Example:
+
+```
+"I love Java"
+→
+"I love JavaScript"
+```
+
+### Q17. Replace all occurrences of a word.
+### Q18. Extract the first 5 characters using:
+
+* `slice()`
+* `substring()`
+
+### Q19. Explain the difference between:
+* `slice()`
+* `substring()`
+* `substr()` *(deprecated)*
+
+### Q20. Remove whitespace from both ends of a string.
+
+---
+
+# 🟠 Intermediate (21–30)
+
+### Q21. Check whether a string starts with a given word.
+### Q22. Check whether a string ends with a given word.
+### Q23. Split a sentence into words.
+### Q24. Join an array of words into a sentence.
+### Q25. Count the number of words in a sentence.
+### Q26. Capitalize the first letter of a string.
+Example:
+
+```
+hello
+↓
+Hello
+```
+
+### Q27. Capitalize the first letter of every word.
+Example:
+
+```
+hello world
+↓
+Hello World
+```
+
+### Q28. Swap the case of every character.
+Example:
+
+```
+HeLLo
+↓
+hEllO
+```
+
+### Q29. Remove all spaces from a string.
+### Q30. Remove duplicate characters.
+Example:
+
+```
+programming
+↓
+progamin
+```
+
+---
+
+# 🔵 Advanced Logic (31–40)
+
+### Q31. Check whether a string is a palindrome.
+### Q32. Find the most frequent character in a string.
+### Q33. Count the frequency of every character.
+Example:
+
+```
+apple
+
+a : 1
+p : 2
+l : 1
+e : 1
+```
+
+### Q34. Print duplicate characters only.
+Example:
+
+```
+programming
+
+r
+g
+m
+```
+
+### Q35. Print non-repeated characters.
+### Q36. Find the longest word in a sentence.
+### Q37. Find the shortest word in a sentence.
+### Q38. Check whether two strings are anagrams.
+Example:
+
+```
+listen
+silent
+```
+
+### Q39. Check whether one string is a rotation of another.
+Example:
+
+```
+ABCD
+CDAB
+```
+
+### Q40. Compress a string using Run-Length Encoding.
+Example:
+
+```
+aaabbccccd
+↓
+
+a3b2c4d1
+```
+
+---
+
+# 🔴 Interview & Problem Solving (41–45)
+
+### Q41. Implement your own version of `includes()` without using the built-in method.
+### Q42. Implement your own version of `startsWith()`.
+### Q43. Implement your own version of `endsWith()`.
+### Q44. Find the longest substring without repeating characters.
+Example:
+
+```
+abcabcbb
+
+↓
+
+abc
+
+Length = 3
+```
+### Q45. Group anagrams together.
+Example:
+
+```
+["eat","tea","tan","ate","nat","bat"]
+
+↓
+
+[
+ ["eat","tea","ate"],
+ ["tan","nat"],
+ ["bat"]
+]
+```
