@@ -211,9 +211,9 @@ console.log(isPrime(9)); // true
 console.log(isPrime(2)); // false
 
 //28
-let squar = x => x * x; //If there is exactly one parameter, parentheses are optional.
+let squar = (x) => x * x; //If there is exactly one parameter, parentheses are optional.
 
-let double = x => x * 2; //You can omit {} only if the function has a single expression.
+let double = (x) => x * 2; //You can omit {} only if the function has a single expression.
 
 let addd = (a, b) => a + b; //If braces are omitted, the expression is returned automatically (called an implicit return). If you use braces, you must write return.
 
@@ -223,7 +223,34 @@ const person = {
 
   greet: () => {
     console.log(this.name);
-  }
+  },
 };
 
 person.greet(); //output: undefined, cause arrow functions do not create their own this. Instead, they inherit this from the surrounding (lexical) scope.
+
+//30 default parameter
+function greetA(name = "guest") {
+  return `hello ${name}`;
+}
+console.log(greetA());
+
+//31
+function calculator(a = 0, b = 0, operator = "+") {
+  switch (operator) {
+    case "+":
+      return a + b;
+
+    case "-":
+      return a - b;
+
+    case "*":
+      return a * b;
+
+    case "/":
+      if (a === 0) {
+        return "cannot divide zero";
+      } else return a / b;
+  }
+}
+
+console.log(calculator(3, 2, "/"));
