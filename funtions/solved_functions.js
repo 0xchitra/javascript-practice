@@ -342,7 +342,7 @@ function multiplyy(x, y) {
   return x * y;
 }
 
-console.log(calculate(5, 3, add));      // 8
+console.log(calculate(5, 3, add)); // 8
 console.log(calculate(5, 3, multiply)); // 15
 
 //41
@@ -357,3 +357,34 @@ const numbers = [11, 22, 33];
 myForEach(numbers, function (num) {
   console.log(num);
 });
+
+//42 recursion is a programming technique where a function calls itself to solve a problem, instead of using a loop, the function repeatedly calls itself till base case is reached.
+
+//43
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+console.log(factorial(5));
+
+//44
+function printNumbers(n) {
+  if (n === 0) {
+    return;
+  }
+  printNumbers(n - 1);
+  console.log(n);
+}
+printNumbers(20);
+
+//45
+function sumOfDigits(num) {
+  if (num === 0) {
+    return 0;
+  }
+  return (num % 10) +
+  sumOfDigits(Math.floor(num / 10));
+}
+console.log(sumOfDigits(12345));
