@@ -457,3 +457,85 @@ let sum = myReduce(numbrs, function (acc, num) {
 }, 0);
 
 console.log(sum);
+
+//51
+function calc(a, b, operator) {
+  switch (operator) {
+    case "add":
+      return a + b;
+    case "subtract":
+      return a - b;
+    case "multiply":
+      return a * b;
+    case "divide":
+      if (a === 0) {
+        return "cannot divide zero";
+      }
+      return a / b;
+    case "modulus":
+      return a % b;
+    case "power":
+      return a ** b;
+  }
+}
+console.log(calc(0, 3, "divide"));
+
+//52
+let balance = 1000;
+
+function checkBalance() {
+  return `Current Balance: ₹${balance}`;
+}
+
+function deposit(amount) {
+  if (amount <= 0) {
+    return "Deposit amount must be greater than 0.";
+  }
+  balance += amount;
+  return `₹${amount} deposited successfully.`;
+}
+
+function withdraw(amount) {
+  if (amount <= 0) {
+    return "Withdrawal amount must be greater than 0.";
+  }
+
+  if (amount > balance) {
+    return "Insufficient balance.";
+  }
+
+  balance -= amount;
+  return `₹${amount} withdrawn successfully.`;
+}
+console.log(checkBalance());
+
+console.log(deposit(500));
+console.log(checkBalance());
+
+console.log(withdraw(300));
+console.log(checkBalance());
+
+console.log(withdraw(5000));
+
+//53
+function testResult(mark) {
+  if (mark >= 90) {
+    console.log("grade A");
+  } else if (mark >= 80) {
+    console.log("grade B");
+  } else if (mark >= 70) {
+    console.log("grade C");
+  } else if (mark >= 60) {
+    console.log("grade D");
+  } else {
+    console.log("grade F");
+  }
+  if (mark >= 60) {
+    console.log("Pass");
+  } else {
+    console.log("Fail");
+  }
+  percent = (mark / 100) * 100;
+  console.log(percent + " percent");
+}
+testResult(89);
