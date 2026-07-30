@@ -111,3 +111,58 @@ console.log(poem.substring(0, 5));
 //20
 let space = " chitra  ";
 console.log(space.trim());
+
+//21
+console.log(str.startsWith("hello"));
+
+//22
+console.log(str.endsWith("world"));
+
+//23
+console.log(str.split(" "));
+
+//24
+let arr = ["hello", "i'm", "chitra"];
+console.log(arr.join(" "));
+
+//25
+let sentence = "welcome to javascript mates";
+let words = sentence.trim().split(/\s+/);
+console.log(words.length);
+
+//26
+let capital = str[0].toUpperCase() + str.slice(1);
+console.log(capital);
+
+//27
+let sent = "welcome to the world of javascript ";
+let result = sent.split(" ")
+.map(word => word.charAt(0).toUpperCase()+word.slice(1)).join(" ")
+console.log(result);
+
+//28
+let swappedCase = "";
+for (let char of sent) {
+  if (char === char.toUpperCase()) {
+    swappedCase += char.toLowerCase()
+  } else {
+    swappedCase += char.toUpperCase()
+  }
+}
+
+console.log(swappedCase);
+
+//29
+let noSpace = sent.replaceAll(" ", "");
+console.log(noSpace);
+
+//30
+let noDupChar = "";
+
+for (let char of sent) {
+  if (!noDupChar.includes(char)) {
+    noDupChar += char;
+  }
+}
+
+console.log(noDupChar);
