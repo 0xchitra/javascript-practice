@@ -253,7 +253,7 @@ console.log(longest);
 //37
 // 'str' at line no 6
 let wordss = sentence.split(" ");
-let shortest = words[0];
+let shortest = wordss[0];
 
 for (const word of wordss) {
   if (word.length < shortest.length) {
@@ -298,3 +298,89 @@ for (let i = 0; i < str.length; i++) {
 }
 
 console.log(compressed);
+
+//41
+function myIncludes(str, search) {
+  if (search === "") return true;
+  for (let i = 0; i <= str.length - search.length; i++) {
+    let found = true;
+    for (let j = 0; j < search.length; j++) {
+      if (str[i + j] !== search[j]) {
+        found = false;
+        break;
+      }
+    }
+    if (found) return true;
+  }
+  return false;
+}
+console.log(myIncludes("JavaScript", "Script")); // true
+console.log(myIncludes("JavaScript", "Python")); // false
+
+//42
+function myStartsWith(str, prefix) {
+  if (prefix.length > str.length) return false;
+  for (let i = 0; i < prefix.length; i++) {
+    if (str[i] !== prefix[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(myStartsWith("JavaScript", "Java")); // true
+console.log(myStartsWith("JavaScript", "Script")); // false
+
+//43
+function myEndsWith(str, suffix) {
+  if (suffix.length > str.length) return false;
+  let start = str.length - suffix.length;
+  for (let i = 0; i < suffix.length; i++) {
+    if (str[start + i] !== suffix[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(myEndsWith("JavaScript", "Script")); // true
+console.log(myEndsWith("JavaScript", "Java")); // false
+
+//44
+function longestSubstring(str) {
+  let seen = {};
+  let start = 0;
+  let maxLength = 0;
+  let longest = "";
+
+  for (let end = 0; end < str.length; end++) {
+    const char = str[end];
+    if (seen[char] >= start) {
+      start = seen[char] + 1;
+    }
+    seen[char] = end;
+    if (end - start + 1 > maxLength) {
+      maxLength = end - start + 1;
+      longest = str.slice(start, end + 1);
+    }
+  }
+  return { longest, maxLength };
+}
+
+console.log(longestSubstring("abcabcbb"));
+
+//45
+function groupAnagrams(words) {
+  let groups = {};
+  for (let word of words) {
+    let key = word.split("").sort().join("");
+    if (!groups[key]) {
+      groups[key] = [];
+    }
+    groups[key].push(word);
+  }
+  return Object.values(groups);
+}
+
+let wordzz = ["eat", "tea", "tan", "ate", "nat", "bat"];
+console.log(groupAnagrams(wordzz));
