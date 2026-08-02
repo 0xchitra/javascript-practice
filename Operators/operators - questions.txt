@@ -1,6 +1,6 @@
 # JavaScript Operators Practice Questions
 
-## Beginner
+Beginner
 
 Q1. Add two numbers and print the result.
 Q2. Subtract one number from another.
@@ -13,7 +13,7 @@ Q8. Use `+=` to increase a variable by `10`.
 Q9. Use `-=` to decrease a variable by `5`.
 Q10. Use `*=`, `/=`, and `%=` on a variable.
 
-## 🟡 Comparison Operators
+🟡 Comparison Operators
 
 Q11. Check if two numbers are equal using `==`.
 Q12. Check if two numbers are strictly equal using `===`.
@@ -24,7 +24,7 @@ Q16. Check whether one number is greater than another.
 Q17. Check whether one number is less than or equal to another.
 Q18. Store the result of a comparison inside a variable.
 
-## 🟠 Logical Operators
+🟠 Logical Operators
 
 Q19. Check if a person is eligible to vote (`age >= 18`).
 Q20. Check if a number lies between `10` and `20`.
@@ -33,14 +33,14 @@ Q22. Check if either of two numbers is negative.
 Q23. Use the `!` operator to reverse a boolean.
 Q24. Write a condition that returns `true` only if a user is logged in **and** is an admin.
 
-## 🔵 Ternary Operator
+🔵 Ternary Operator
 
 Q25. Use the ternary operator to print `"Adult"` or `"Minor"`.
 Q26. Print the larger of two numbers using the ternary operator.
 Q27. Determine whether a number is even or odd using a ternary operator.
 Q28. Return `"Pass"` if marks are at least `40`, otherwise `"Fail"`.
 
-## 🟣 Nullish & Optional Values
+🟣 Nullish & Optional Values
 
 Q29. Use the `??` operator to provide `"Guest"` when `username` is `null`.
 Q30. Compare the output of `||` and `??` using:
@@ -56,7 +56,7 @@ Explain the difference.
 Q31. Assign a default value using `||`.
 Q32. Assign a default value using `??`.
 
-## 🔴 Operator Precedence
+🔴 Operator Precedence
 
 Q33. Predict the output before running:
 console.log(5 + 2 * 3);
@@ -70,7 +70,7 @@ console.log(true || false && false);
 Q36. Predict the output:
 console.log(!false && false);
 
-## 🟤 Type Coercion
+🟤 Type Coercion
 
 Q37. Predict the output:
 console.log("5" + 2);
@@ -96,7 +96,7 @@ console.log("" == 0);
 Q44. Predict the output:
 console.log("10" > 2);
 
-## ⚫ Short-Circuiting
+⚫ Short-Circuiting
 
 Q45. Use `&&` to execute a function only if a variable is `true`.
 Q46. Use `||` to provide a fallback value.
@@ -106,14 +106,14 @@ console.log(false && "Hello");
 Q48. Explain what this prints:
 console.log(true || "Hello");
 
-## 🔶 Bitwise Operators (Optional)
+🔶 Bitwise Operators (Optional)
 
 Q49. Use the bitwise `&` operator on `5` and `3`.
 Q50. Use the bitwise `|` operator on `5` and `3`.
 Q51. Left shift `5` by `2`.
 Q52. Right shift `20` by `2`.
 
-## 🔥 Advanced
+🔥 Advanced
 
 Q53. Swap two variables without using a third variable **using arithmetic operators only**.
 Q54. Swap two variables using the XOR (`^`) operator.

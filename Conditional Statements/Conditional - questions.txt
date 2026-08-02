@@ -167,7 +167,6 @@ Above 200 → ₹10/unit
 Calculate the total bill.
 
 ### Q40. FizzBuzz (Conditionals Version)
-
 Print:
 
 * `"Fizz"` if divisible by 3
@@ -176,8 +175,6 @@ Print:
 * Otherwise print the number
 
 ---
-
-## ✅ Topics Covered
 
 By solving these 40 questions, a learner will understand:
 

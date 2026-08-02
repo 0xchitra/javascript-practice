@@ -1,6 +1,6 @@
 # JavaScript Operators Practice Questions
 
-# Beginner ->
+# Beginner
 
 ### Q1. Add two numbers and print the result.
 
