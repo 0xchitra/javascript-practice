@@ -166,3 +166,135 @@ for (let char of sent) {
 }
 
 console.log(noDupChar);
+
+//31
+let pString = "noon";
+let original = pString;
+let duplicate = "";
+
+for (let i = pString.length - 1; i >= 0; i--) {
+  duplicate += pString[i]
+}
+
+if (original === duplicate){
+  console.log(true)
+} else {
+  console.log(false)
+}
+
+//32
+// let str = "hello world";
+let freq = {};
+let maxChar = "";
+let maxCount = 0;
+
+for (let char of str) {
+  freq[char] = (freq[char] || 0) + 1;
+
+  if (freq[char] > maxCount) {
+    maxCount = freq[char];
+    maxChar = char;
+  }
+}
+
+console.log(maxChar, maxCount);
+
+//33
+// 'str' at line no 6
+let frequ = {};
+
+for (let char of str) {
+  frequ[char] = (frequ[char] || 0) + 1;
+}
+
+console.log(frequ);
+
+//34
+// 'str' at line no 6
+let freqn = {};
+
+for (let char of str) {
+  freqn[char] = (freqn[char] || 0) + 1;
+}
+
+for (const key in freqn) {
+  if (freqn[key] > 1) {
+    console.log(key);
+  }
+}
+
+//35
+// 'str' at line no 6
+let freqnc = {};
+
+for (const char of str) {
+  freqnc[char] = (freqnc[char] || 0) + 1;
+}
+
+for (const key in freqnc) {
+  if (freqnc[key] === 1) {
+    console.log(key);
+  }
+}
+
+//36
+// 'str' at line no 6
+let wordz = sentence.split(" ");
+let longest = "";
+
+for (const word of wordz) {
+  if (word.length > longest.length) {
+    longest = word;
+  }
+}
+
+console.log(longest);
+
+//37
+// 'str' at line no 6
+let wordss = sentence.split(" ");
+let shortest = words[0];
+
+for (const word of wordss) {
+  if (word.length < shortest.length) {
+    shortest = word;
+  }
+}
+
+console.log(shortest);
+
+//38
+let strY = "listen";
+let strZ = "silent";
+
+const resultIs =
+strY.split("").sort().join("") ===
+strZ.split("").sort().join("");
+
+console.log(resultIs);
+
+//39
+let strAB = "ABCD";
+let strCD = "CDAB";
+
+const resultz =
+strAB.length === strCD.length &&
+(strAB + strAB).includes(strCD);
+
+console.log(resultz);
+
+//40
+// 'str' at line no 6
+let compressed = "";
+let count = 1;
+
+for (let i = 0; i < str.length; i++) {
+  if (str[i] === str[i + 1]) {
+    count++;
+  } else {
+    compressed += str[i] + count;
+    count = 1;
+  }
+}
+
+console.log(compressed);
