@@ -45,7 +45,7 @@ fruits.forEach((frts) => {
 });
 
 //11
-let numArray = [1, 2, 3, 4, 5];
+let numArray = [1, 2, 3, 4, 5, 1, 2, 1];
 console.log(numArray.reduce((acc, currValue) => acc + currValue, 0));
 
 //12
@@ -86,3 +86,52 @@ for (i = numArray.length - 1; i >= 0; i--) {
 console.log(reverse);
 
 //16
+let spreadCopy = [...fruits];
+console.log(`spread Copy: ${spreadCopy}`);
+
+let fromCopy = Array.from(fruits);
+console.log(`from Copy: ${fromCopy}`);
+
+let sliceCopy = fruits.slice();
+console.log(`slice Copy: ${sliceCopy}`);
+
+//shallow copy
+const arr = [{ name: "John" }, { name: "Alice" }];
+
+const copy = [...arr];
+console.log(arr);
+
+copy[0].name = "Mike";
+console.log(copy);
+// [{ name: "Mike" }, { name: "Alice" }]
+
+//17
+let joint = fruits.concat(numArray);
+console.log(joint);
+
+//18
+const arr1 = [1, 2, 3];
+const arr2 = [1, 2, 3];
+
+console.log(JSON.stringify(arr1) === JSON.stringify(arr2));
+
+//19
+//using set
+const unique = [...new Set(numArray)];
+console.log(unique);
+
+//using filter
+const unique2 = numArray.filter((item, index) => {
+  return numArray.indexOf(item) === index;
+});
+console.log(unique2);
+
+//20
+let isAppear = 1;
+let appear = 0;
+for (num of numArray) {
+  if (num === isAppear) {
+    appear++;
+  }
+}
+console.log(`${isAppear} appears ${appear} times`);
