@@ -43,3 +43,46 @@ for (fruit of fruits) {
 fruits.forEach((frts) => {
   console.log(frts);
 });
+
+//11
+let numArray = [1, 2, 3, 4, 5];
+console.log(numArray.reduce((acc, currValue) => acc + currValue, 0));
+
+//12
+let largest = 0;
+for (num of numArray) {
+  if (num > largest) {
+    largest = num;
+  }
+}
+console.log(largest);
+
+//13
+let smallest = 1;
+for (num of numArray) {
+  if (num < smallest) {
+    smallest = num;
+  }
+}
+console.log(smallest);
+
+//14
+let evens = 0;
+let odds = 0;
+for (num of numArray) {
+  if (num % 2 === 0) {
+    evens++;
+  } else {
+    odds++;
+  }
+}
+console.log(`total even: ${evens}, total odd: ${odds}`);
+
+//15
+let reverse = [];
+for (i = numArray.length - 1; i >= 0; i--) {
+  reverse += numArray[i];
+}
+console.log(reverse);
+
+//16
