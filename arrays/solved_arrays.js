@@ -45,7 +45,7 @@ fruits.forEach((frts) => {
 });
 
 //11
-let numArray = [1, 2, 3, 4, 5, 1, 2, 1];
+let numArray = [0, 1, 2, 3, 0, 4, 5, 1, 2, 0, 1];
 console.log(numArray.reduce((acc, currValue) => acc + currValue, 0));
 
 //12
@@ -135,3 +135,105 @@ for (num of numArray) {
   }
 }
 console.log(`${isAppear} appears ${appear} times`);
+
+//21
+function secondLargest(arr) {
+  let largest = -Infinity; // +infinity will be larger than any number
+  let second = -Infinity;
+
+  for (let num of arr) {
+    if (num > largest) {
+      second = largest;
+      largest = num;
+    } else if (num > second && num !== largest) {
+      second = num;
+    }
+  }
+  return second;
+}
+console.log(secondLargest(numArray));
+
+//22
+function secondSmallest(arr) {
+  let smallest = Infinity;
+  let second = Infinity;
+
+  for (num of arr) {
+    if (num < smallest) {
+      second = smallest;
+      smallest = Number;
+    } else if ( num < second && num !== smallest) {
+      second = num;
+    }
+  }
+  return second;
+}
+console.log(secondSmallest(numArray));
+
+//23
+function moveZeros(arr) {
+  let final = [];
+  for (let num of arr) {
+    if (num !== 0) {
+      final.push(num);
+    }
+  }
+  while (final.length < arr.length){
+    final.push(0);
+  }
+  return final;
+}
+console.log(moveZeros(numArray)); //let numArray is at line 48
+
+//24
+let leftArray = [1, 2, 3,  4, 5];
+let first = leftArray.shift();
+leftArray.push(first)
+console.log(leftArray)
+
+//25
+let rightArray = [1,2,3,4,5];
+let last = rightArray.pop();
+rightArray.unshift(last);
+console.log(rightArray);
+
+//26
+let rotateArray = [1,2,3,4,5,6,7,8];
+function rotate(arr, k) {
+  k = k % arr.length;
+  return [...arr.slice(-k), ...arr.slice(0, -k)];
+}
+
+console.log(rotate(rotateArray,2))
+
+//27
+function missingNumber(arr) {
+  let n = arr.length + 1;
+  let expected = (n * (n + 1)) / 2;
+  let actual = arr.reduce((sum, num) => sum + num, 0);
+  return expected - actual;
+}
+console.log(missingNumber([1, 2, 3, 5, 6]));
+
+//28
+function intersection(arr1, arr2) {
+  return arr1.filter(item => arr2.includes(item));
+}
+console.log(intersection([1,2,3,4], [3,4,5,6]));
+
+//29
+function union(arr1, arr2) {
+  return [...new Set([...arr1, ...arr2])];
+}
+console.log(union([1,2,3], [3,4,5]));
+
+//30
+function chunk(arr, size) {
+  const result = [];
+
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+}
+console.log(chunk([1,2,3,4,5], 2));
