@@ -161,7 +161,7 @@ function secondSmallest(arr) {
   for (num of arr) {
     if (num < smallest) {
       second = smallest;
-      smallest = Number;
+      smallest = num;
     } else if ( num < second && num !== smallest) {
       second = num;
     }
@@ -237,3 +237,148 @@ function chunk(arr, size) {
   return result;
 }
 console.log(chunk([1,2,3,4,5], 2));
+
+//31
+function flatten(arr) {
+  const result = [];
+
+  for (let item of arr) {
+    if (Array.isArray(item)) {
+      result.push(...flatten(item));
+    } else {
+      result.push(item);
+    }
+  }
+  return result;
+}
+console.log(flatten([1, [2, 3], [4, [5, 6]]]));
+
+//32
+function maxOccurring(arr) {
+  let freq = {};
+  let maxCount = 0;
+  let result;
+  for (let item of arr) {
+    freq[item] = (freq[item] || 0) + 1;
+    if (freq[item] > maxCount) {
+      maxCount = freq[item];
+      result = item;
+    }
+  }
+  return result;
+}
+console.log(maxOccurring(numArray));
+
+//33
+function groupEvenOdd(arr) {
+  const result = {
+    even: [],
+    odd: []
+  };
+
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      result.even.push(num);
+    } else {
+      result.odd.push(num);
+    }
+  }
+
+  return result;
+}
+
+console.log(groupEvenOdd(numArray));
+
+//34
+function removeFalsy(arr) {
+  const result = [];
+  for (let item of arr) {
+    if (item) {
+      result.push(item);
+    }
+  }
+  return result;
+}
+console.log(removeFalsy([0, false, "", null, undefined, NaN, 1, "hello"]));
+
+//35
+function arrayToObject(arr) {
+  const obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    obj[i] = arr[i];
+  }
+  return obj;
+}
+console.log(arrayToObject(["a", "b", "c"]));
+
+//36
+function firstDuplicate(arr) {
+  const seen = new Set();
+  for (let item of arr) {
+    if (seen.has(item)) {
+      return item;
+    }
+    seen.add(item);
+  }
+  return null;
+}
+console.log(firstDuplicate([1, 2, 3, 2, 4, 1]));
+
+//37
+function findDuplicates(arr) {
+  let seen = new Set();
+  let duplicates = new Set();
+  for (let item of arr) {
+    if (seen.has(item)) {
+      duplicates.add(item);
+    } else {
+      seen.add(item);
+    }
+  }
+  return [...duplicates];
+}
+console.log(findDuplicates(numArray));
+
+//38
+function removeElement(arr, value) {
+  let result = [];
+  for (let item of arr) {
+    if (item !== value) {
+      result.push(item);
+    }
+  }
+  return result;
+}
+console.log(removeElement([1, 2, 3, 2, 4], 2));
+
+//39
+function longestString(arr) {
+  let longest = "";
+  for (let str of arr) {
+    if (str.length > longest.length) {
+      longest = str;
+    }
+  }
+  return longest;
+}
+console.log(longestString(["cat", "elephant", "dog", "javascript"]));
+
+//40
+//ascending order
+let numbersForAsc = [10, 5, 2, 30];
+numbersForAsc.sort((a, b) => a - b);
+console.log(numbersForAsc);
+
+//descending order
+let numbersForDec = [10, 5, 2, 30];
+numbersForDec.sort((a, b) => b - a);
+console.log(numbersForDec);
+
+//alphabetically
+let fruitsForSort = ["banana", "apple", "orange", "grape"];
+fruitsForSort.sort();
+console.log(fruitsForSort);
+
+// By default, sort() converts elements to strings and compares them lexicographically, "10" comes before "2" because "1" is less than "2".
+// const sorted = [...numbers].sort((a, b) => a - b);
+//Interview Tip: Array.prototype.sort() mutates (modifies) the original array.
