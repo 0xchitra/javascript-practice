@@ -382,3 +382,131 @@ console.log(fruitsForSort);
 // By default, sort() converts elements to strings and compares them lexicographically, "10" comes before "2" because "1" is less than "2".
 // const sorted = [...numbers].sort((a, b) => a - b);
 //Interview Tip: Array.prototype.sort() mutates (modifies) the original array.
+
+//41
+Array.prototype.myMap = function (callback) {
+  let result = [];
+
+  for (let i = 0; i < this.length; i++) {
+    result.push(callback(this[i], i, this));
+  }
+  return result;
+};
+
+let nums = [1, 2, 3, 4];
+let doubled = nums.myMap(num => num * 2);
+console.log(doubled);
+
+//42
+Array.prototype.myFilter = function (callback) {
+  const result = [];
+
+  for (let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this)) {
+      result.push(this[i]);
+    }
+  }
+  return result;
+};
+
+let numbers = [1, 2, 3, 4, 5];
+let even = numbers.myFilter(num => num % 2 === 0);
+console.log(even);
+
+//43
+Array.prototype.myReduce = function (callback, initialValue) {
+  let accumulator = initialValue;
+  let startIndex = 0;
+
+  if (accumulator === undefined) {
+    accumulator = this[0];
+    startIndex = 1;
+  }
+  for (let i = startIndex; i < this.length; i++) {
+    accumulator = callback(accumulator, this[i], i, this);
+  }
+  return accumulator;
+};
+
+let numberz = [1, 2, 3, 4];
+let sum = numberz.myReduce((acc, curr) => acc + curr, 0);
+console.log(sum);
+
+//44
+function frequency(arr) {
+  let freq = {};
+  for (const item of arr) {
+    freq[item] = (freq[item] || 0) + 1;
+  }
+  return freq;
+}
+
+console.log(frequency(["a", "b", "a", "c", "b", "a"]));
+
+//45
+function majorityElement(arr) {
+  const freq = {};
+  for (let num of arr) {
+    freq[num] = (freq[num] || 0) + 1;
+
+    if (freq[num] > arr.length / 2) {
+      return num;
+    }
+  }
+  return null;
+}
+
+console.log(majorityElement([2, 2, 1, 2, 3, 2, 2]));
+
+//46
+function maxSubArray(arr) {
+  let maxSum = arr[0];
+  let currentSum = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    currentSum = Math.max(arr[i], currentSum + arr[i]);
+    maxSum = Math.max(maxSum, currentSum);
+  }
+  return maxSum;
+}
+
+console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));
+
+//47
+function productExceptSelf(arr) {
+  const result = new Array(arr.length).fill(1);
+
+  let prefix = 1;
+  for (let i = 0; i < arr.length; i++) {
+    result[i] = prefix;
+    prefix *= arr[i];
+  }
+  let suffix = 1;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    result[i] *= suffix;
+    suffix *= arr[i];
+  }
+  return result;
+}
+console.log(productExceptSelf([1, 2, 3, 4]));
+
+//48
+function longestConsecutive(arr) {
+  const set = new Set(arr);
+  let longest = 0;
+
+  for (let num of set) {
+    if (!set.has(num - 1)) {
+      let current = num;
+      let length = 1;
+
+      while (set.has(current + 1)) {
+        current++;
+        length++;
+      }
+      longest = Math.max(longest, length);
+    }
+  }
+  return longest;
+}
+
+console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
