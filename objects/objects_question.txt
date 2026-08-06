@@ -51,11 +51,9 @@ Q8. Iterate Object
 
 Print:
 
-
-name : Chitra
-age : 20
-city : Nagaon
-
+name : "Chitra",
+age : 20,
+city : "Nagaon",
 
 using a loop.
 
@@ -63,9 +61,9 @@ Q9. Sum Numeric Properties
 
 
 const salaries = {
-  Chitra:100,
-  Jane:200,
-  Jack:300
+  Chitra:5000,
+  Jane:2000,
+  Jack:3000
 };
 
 

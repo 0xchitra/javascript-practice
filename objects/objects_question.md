@@ -52,9 +52,9 @@ Write a function that returns how many properties an object has.
 Print:
 
 ```
-name : Chitra
-age : 20
-city : Nagaon
+name : "Chitra",
+age : 20,
+city : "Nagaon",
 ```
 
 using a loop.
@@ -63,9 +63,9 @@ using a loop.
 
 ```js
 const salaries = {
-  Chitra:100,
-  Jane:200,
-  Jack:300
+  Chitra:5000,
+  Jane:2000,
+  Jack:3000
 };
 ```
 

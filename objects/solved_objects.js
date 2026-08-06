@@ -27,3 +27,47 @@ console.log(person);
 //5
 delete person.city;
 console.log(person);
+
+//6
+let isExist = "age" in person;
+console.log(isExist);
+
+//7
+function countProperties(obj) {
+  return Object.keys(obj).length;
+}
+console.log(countProperties(person));
+
+//8
+let user = {
+  name: "Chitra",
+  age: 20,
+  city: "Nagaon",
+};
+for (let key in user) {
+  console.log(key, user[key]);
+}
+
+//9
+const salaries = {
+  Chitra: 5000,
+  Jane: 2000,
+  Jack: 3000,
+};
+let sum = 0;
+for (key in salaries) {
+  sum = sum + salaries[key];
+}
+console.log(sum);
+
+//10
+let highestEmpl = "";
+let highestSalr = 0;
+for (let [name, salary] of Object.entries(salaries)) {
+  if (salary > highestSalr) {
+    highestSalr = salary;
+    highestEmpl = name;
+  }
+}
+console.log(highestEmpl);
+console.log(highestSalr);
