@@ -37,7 +37,7 @@ Add an `email` property to an existing object.
 
 Q5. Delete Property
 
-Remove the `password` property from an object.
+Remove the `city` property from an object.
 
 Q6. Check Property Exists
 
