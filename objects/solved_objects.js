@@ -16,15 +16,15 @@ console.log(car["brand"]);
 console.log(car["model"]);
 console.log(car["year"]);
 
-//3
+//3 update
 person.age = 21;
 console.log(person);
 
-//4
+//4 add
 person.email = "test@hello.com";
 console.log(person);
 
-//5
+//5 delete
 delete person.city;
 console.log(person);
 
@@ -71,3 +71,41 @@ for (let [name, salary] of Object.entries(salaries)) {
 }
 console.log(highestEmpl);
 console.log(highestSalr);
+
+//11
+function isEmpty(val) {
+  return Object.keys(val).length === 0;
+}
+console.log(isEmpty(person));
+
+//12
+let user1 = {
+  username: "0xchitra",
+  name: "Chitra",
+  age: 20,
+  city: "Nagaon",
+};
+
+user1.userName = user1.username;
+delete user1.username;
+
+console.log(user1);
+
+//13
+let { name, city } = user1;
+console.log(name);
+console.log(city);
+
+//14
+const userA = {
+  name: "Alex",
+  address: {
+    city: "Nagaon",
+    pincode: 123456,
+  },
+};
+console.log(userA.address.city);
+
+//15
+userA.address.pincode = 654321;
+console.log(userA);
