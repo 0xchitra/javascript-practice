@@ -158,3 +158,60 @@ for (sal of sals) {
   totalSal += sal;
 }
 console.log(totalSal);
+
+//21
+let data = {
+  a: 1,
+  b: 2,
+};
+let result = Object.entries(data);
+console.log(result);
+
+//22
+const reversed = {};
+for (let [key, value] of Object.entries(data)) {
+  reversed[value] = key;
+}
+
+console.log(reversed);
+
+//23
+const obj1 = {
+  name: "Chitra",
+  age: 20,
+};
+
+const obj2 = {
+  age: 22,
+  city: "Nagaon",
+};
+
+const merged = {
+  ...obj1,
+  ...obj2,
+};
+console.log(merged);
+
+//24
+const original = {
+  name: "Chitra",
+  age: 20
+};
+
+const copy = { ...original };
+copy.age = 22;
+
+console.log(original.age); // 20
+console.log(copy.age);     // 25
+
+//25
+const userNew = {
+  name: "Chitra",
+  address: {
+    city: "Ghy"
+  }
+};
+
+const copyNew = { ...userNew };
+copyNew.address.city = "Mumbai";
+console.log(userNew.address.city);
