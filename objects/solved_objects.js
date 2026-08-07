@@ -109,3 +109,52 @@ console.log(userA.address.city);
 //15
 userA.address.pincode = 654321;
 console.log(userA);
+
+//16
+let calculator = {
+  add(a, b) {
+    return a + b;
+  },
+
+  subtract(a, b) {
+    return a - b;
+  },
+
+  multiply(a, b) {
+    return a * b;
+  },
+};
+//functions stored inside a object = methods
+
+console.log(calculator.add(5, 3));
+console.log(calculator.subtract(5, 3));
+console.log(calculator.multiply(5, 3));
+
+//17
+const userr = {
+  name: "Chitra",
+  greet() {
+    console.log(this.name);
+  },
+};
+
+userr.greet();
+// Explanation: 'this' refers to the object before the dot (userr), so this.name is "Chitra".
+
+//18
+let fruit = "apple";
+let fruitCounts = {
+  [fruit]: 10,
+};
+console.log(fruitCounts);
+
+//19
+console.log(Object.keys(person));
+
+//20
+let sals = Object.values(salaries);
+let totalSal = 0;
+for (sal of sals) {
+  totalSal += sal;
+}
+console.log(totalSal);
