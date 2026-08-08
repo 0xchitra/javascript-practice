@@ -195,23 +195,108 @@ console.log(merged);
 //24
 const original = {
   name: "Chitra",
-  age: 20
+  age: 20,
 };
 
 const copy = { ...original };
 copy.age = 22;
 
 console.log(original.age); // 20
-console.log(copy.age);     // 25
+console.log(copy.age); // 25
 
-//25
+//25 shallow copy
 const userNew = {
   name: "Chitra",
   address: {
-    city: "Ghy"
-  }
+    city: "Nagaon",
+  },
 };
 
 const copyNew = { ...userNew };
-copyNew.address.city = "Mumbai";
+copyNew.address.city = "Ghy";
 console.log(userNew.address.city);
+
+//26
+function deepClone(obj) {
+  if (obj === null || typeof obj !== "object") {
+    return obj;
+  }
+  const clone = Array.isArray(obj) ? [] : {};
+  for (const key in obj) {
+    clone[key] = deepClone(obj[key]);
+  }
+  return clone;
+}
+const clone = deepClone(userNew);
+
+clone.address.city = "Mumbai";
+console.log(userNew); // original
+console.log(clone); // clone
+
+//27
+const obj = Object.freeze({
+  name: "Chitra",
+});
+
+obj.name = "Hugo";
+console.log(obj.name);
+
+//28
+const isName = { name: "John" };
+
+Object.preventExtensions(isName);
+isName.age = 20; // ignored
+isName.name = "Alex"; // allowed
+delete isName.name; // allowed
+console.log(isName);
+
+Object.seal(isName);
+isName.name = "Alex"; // allowed
+isName.age = 20; // ignored
+delete isName.name; // ignored
+console.log(isName);
+
+Object.freeze(isName);
+isName.name = "Alex"; // ignored
+isName.age = 20; // ignored
+delete isName.name; // ignored
+console.log(isName);
+
+//29
+const user29 = {};
+
+Object.defineProperty(user29, "id", {
+  value: 101,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
+
+user29.id = 200;
+delete user29.id;
+
+console.log(user29.id); // 101
+
+for (const key in user29) {
+  console.log(key);
+}
+
+//30
+const person30 = {
+  firstName: "Chitra",
+  lastName: "Hugo",
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+
+  set fullName(value) {
+    [this.firstName, this.lastName] = value.split(" ");
+  }
+};
+
+console.log(person.fullName);
+person.fullName = "Hugo Hamada";
+
+console.log(person30.firstName);
+console.log(person30.lastName);
