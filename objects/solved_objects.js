@@ -292,7 +292,7 @@ const person30 = {
 
   set fullName(value) {
     [this.firstName, this.lastName] = value.split(" ");
-  }
+  },
 };
 
 console.log(person.fullName);
@@ -300,3 +300,99 @@ person.fullName = "Hugo Hamada";
 
 console.log(person30.firstName);
 console.log(person30.lastName);
+
+//31
+let objQuery = {
+  name: "Chitra",
+  age: 20,
+};
+
+let query = Object.entries(objQuery)
+  .map(([key, value]) => `${key}=${value}`)
+  .join("&");
+
+console.log(query);
+
+//32
+let objFalsy = {
+  a: 1,
+  b: null,
+  c: false,
+  d: "",
+  e: 0,
+};
+
+let falsyResult = {};
+for (const [key, value] of Object.entries(obj)) {
+  if (value) {
+    result[key] = value;
+  }
+}
+
+console.log(falsyResult);
+
+//33
+function isEqual(obj1, obj2) {
+  let keys1 = Object.keys(obj1);
+  let keys2 = Object.keys(obj2);
+
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+
+  for (let key of keys1) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isEqual(obj1, obj2));
+
+//34 flatten
+function flatten(obj, parent = "", result = {}) {
+  for (const key in obj) {
+    let newKey = parent ? `${parent}.${key}` : key;
+
+    if (typeof obj[key] === "object" && obj[key] !== null) {
+      flatten(obj[key], newKey, result);
+    } else {
+      result[newKey] = obj[key];
+    }
+  }
+  return result;
+}
+
+const userFlatten = {
+  person: {
+    name: "Chitra",
+    address: {
+      city: "Nagaon",
+    },
+  },
+};
+
+console.log(flatten(userFlatten));
+
+//35 unflatten
+function unflatten(obj) {
+  const result = {};
+
+  for (let key in obj) {
+    const keys = key.split(".");
+    let current = result;
+    while (keys.length > 1) {
+      let part = keys.shift();
+      if (!current[part]) {
+        current[part] = {};
+      }
+      current = current[part];
+    }
+    current[keys[0]] = obj[key];
+  }
+  return result;
+}
+
+let flat = { "person.name": "Chitra", "person.address.city": "Nagaon" };
+
+console.log(unflatten(flat));
