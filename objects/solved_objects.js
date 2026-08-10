@@ -394,5 +394,119 @@ function unflatten(obj) {
 }
 
 let flat = { "person.name": "Chitra", "person.address.city": "Nagaon" };
-
 console.log(unflatten(flat));
+
+//36
+let users = [
+  { name: "A", age: 20 },
+  { name: "B", age: 20 },
+  { name: "C", age: 30 },
+];
+
+let grouped = users.reduce((result, user) => {
+  let age = user.age;
+  if (!result[age]) {
+    result[age] = [];
+  }
+  result[age].push(user);
+  return result;
+}, {});
+
+console.log(grouped);
+
+//37
+let userss = [
+  { name: "A", city: "Nagaon" },
+  { name: "B", city: "Mumbai" },
+  { name: "C", city: "Nagaon" },
+  { name: "D", city: "Nagaon" },
+  { name: "E", city: "Mumbai" },
+];
+
+let count = {};
+
+for (let user of userss) {
+  count[user.city] = (count[user.city] || 0) + 1;
+}
+
+let mostFrequent = null;
+let maxCount = 0;
+
+for (let [city, frequency] of Object.entries(count)) {
+  if (frequency > maxCount) {
+    maxCount = frequency;
+    mostFrequent = city;
+  }
+}
+
+console.log(mostFrequent); // Delhi
+console.log(maxCount); // 3
+
+//38
+function deepMerge(obj1, obj2) {
+  let result = { ...obj1 };
+
+  for (let key in obj2) {
+    if (
+      typeof obj2[key] === "object" &&
+      obj2[key] !== null &&
+      typeof result[key] === "object" &&
+      result[key] !== null
+    ) {
+      result[key] = deepMerge(result[key], obj2[key]);
+    } else {
+      result[key] = obj2[key];
+    }
+  }
+  return result;
+}
+
+let merge = deepMerge(obj1, obj2);
+console.log(merge);
+
+//39
+function myAssign(target, ...sources) {
+  for (let source of sources) {
+    for (let key in source) {
+      target[key] = source[key];
+    }
+  }
+  return target;
+}
+
+let obj01 = {
+  name: "Chitra",
+};
+
+let obj02 = {
+  age: 20,
+};
+
+let obj03 = {
+  city: "Mumbai",
+};
+
+let assign = myAssign(obj01, obj02, obj03);
+console.log(assign);
+
+//40
+function objectDifference(obj1, obj2) {
+  let result = {};
+
+  let keys = new Set([
+    ...Object.keys(obj1),
+    ...Object.keys(obj2)
+  ]);
+
+  for (let key of keys) {
+    if (obj1[key] !== obj2[key]) {
+      result[key] = {
+        first: obj1[key],
+        second: obj2[key]
+      };
+    }
+  }
+  return result;
+}
+
+console.log(objectDifference(obj1, obj2));
