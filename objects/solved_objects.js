@@ -547,3 +547,14 @@ function pick(obj, properties) {
 
 console.log(pick(user, ["name", "age"]));
 
+//43
+function omit(obj, properties) {
+  const result = { ...obj };
+
+  for (const property of properties) {
+    delete result[property];
+  }
+  return result;
+}
+
+console.log(omit(user, ["password", "age"]));
