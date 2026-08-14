@@ -1,0 +1,282 @@
+## DOM, Nodes & Element Selection
+
+### Beginner
+
+1. **What is the DOM?** Explain how the browser represents an HTML document as a JavaScript object structure.
+
+2. What is a **DOM node**? Name some different types of nodes that can exist in the DOM.
+
+3. What is the difference between an **Element**, **Node**, and **Text Node**?
+
+4. Given an HTML document, select an element using:
+
+   * `getElementById()`
+   * `querySelector()`
+   * `querySelectorAll()`
+
+5. What is the difference between `querySelector()` and `querySelectorAll()`?
+
+6. What does `getElementsByClassName()` return? How is it different from `querySelectorAll()`?
+
+7. What is the difference between an **HTMLCollection** and a **NodeList**?
+
+8. Select all `<li>` elements inside a `<ul>` using `querySelectorAll()` and print their text.
+
+9. Given multiple elements with the same class, select only the **first matching element**.
+
+10. How would you select an element using:
+
+    * its ID
+    * its class
+    * its tag name
+    * an attribute selector?
+
+---
+
+## Text & Content Access
+
+11. What is the difference between `textContent`, `innerText`, and `innerHTML`?
+
+12. Given:
+
+```html
+<div id="box">
+  Hello <span>World</span>
+</div>
+```
+
+What will `textContent`, `innerText`, and `innerHTML` return?
+
+13. Change the text of an element using `textContent`.
+
+14. Change the HTML inside an element using `innerHTML`.
+
+15. Why can using `innerHTML` with user-provided data be dangerous?
+
+16. Given a list of `<li>` elements, print the text content of every item.
+
+17. Create a paragraph dynamically and set its text using `textContent`. Why might you prefer this over `innerHTML` when inserting plain text?
+
+---
+
+## Attribute Manipulation
+
+18. What are HTML attributes? Give five examples.
+
+19. How do you read an element's attribute using JavaScript?
+
+20. How do you change an element's attribute?
+
+21. How do you add a new attribute to an element?
+
+22. How do you remove an attribute?
+
+23. What is the difference between:
+
+```js
+element.id = "box";
+```
+
+and
+
+```js
+element.setAttribute("id", "box");
+```
+
+24. Given an `<img>`, dynamically change its `src` and `alt` attributes.
+
+25. Given an `<a>` element, dynamically change its `href` and `target` attributes.
+
+26. What do `hasAttribute()`, `getAttribute()`, `setAttribute()`, and `removeAttribute()` do?
+
+27. Given:
+
+```html
+<button id="btn" data-user-id="123">Delete</button>
+```
+
+How would you read the `data-user-id` value using:
+
+* `getAttribute()`
+* `dataset`
+
+---
+
+# Dynamic DOM Manipulation
+
+28. What is the difference between creating an element with `document.createElement()` and writing HTML using `innerHTML`?
+
+29. Create a new `<p>` element using JavaScript and add it to the page.
+
+30. Create a `<li>` element dynamically, give it text, and append it to an existing `<ul>`.
+
+31. What is the difference between `append()`, `appendChild()`, and `prepend()`?
+
+32. Create three `<li>` elements dynamically and add them to a list.
+
+33. How do you remove an element from the DOM?
+
+34. What is the difference between `remove()` and `removeChild()`?
+
+35. Create a button dynamically and add it to the page.
+
+36. Create the following structure entirely with JavaScript:
+
+```html
+<div>
+  <h2>JavaScript</h2>
+  <p>DOM Practice</p>
+</div>
+```
+
+Do not write the HTML manually.
+
+37. Given a list of names in an array, dynamically generate `<li>` elements for every name.
+
+38. Create a **"Delete" button** for every dynamically generated list item.
+
+39. Given a `<ul>` containing five items, dynamically add a new item at the beginning and another at the end.
+
+40. Create a function:
+
+```js
+createCard(title, description)
+```
+
+that dynamically creates and returns a card containing a heading and paragraph.
+
+---
+
+# `.style` Manipulation
+
+41. Change an element's text color using `.style`.
+
+42. Change an element's:
+
+* background color
+* font size
+* width
+* height
+* border
+
+using `.style`.
+
+43. Why do CSS properties such as `background-color` become `backgroundColor` when accessed through JavaScript?
+
+44. Given a box, write JavaScript that changes its size and background color when a button is clicked.
+
+45. What happens when you use:
+
+```js
+element.style.color = "";
+```
+
+46. What is the difference between changing styles using:
+
+```js
+element.style.color = "red";
+```
+
+and changing a CSS class using `classList`?
+
+---
+
+# `classList`
+
+47. What does `classList` represent?
+
+48. Explain the difference between:
+
+```js
+classList.add()
+classList.remove()
+classList.toggle()
+classList.contains()
+classList.replace()
+```
+
+49. Add a class to an element using JavaScript.
+
+50. Remove a class from an element using JavaScript.
+
+51. Create a button that toggles a `dark` class on the `<body>` every time it is clicked.
+
+52. How would you check whether an element currently has a particular class?
+
+53. Build a button that toggles a menu between **visible and hidden** using `classList.toggle()`.
+
+54. Create a simple **accordion** where clicking a heading toggles the visibility of its content.
+
+---
+
+## ⭐ Interview / Challenge Questions
+
+55. **Build a dynamic Todo List.**
+
+Requirements:
+
+* Input for a task
+* Add button
+* Dynamically create `<li>`
+* Delete button for each task
+* Mark task as completed
+* Use `classList` for completed styling
+* Do not reload the page
+
+56. **Build a character counter.**
+
+Given a `<textarea>`, display:
+
+```text
+Characters: 0
+```
+
+and update the count dynamically as the user types.
+
+57. **Build a theme switcher.**
+
+Requirements:
+
+* Light/Dark mode
+* Use `classList.toggle()`
+* Do not directly modify multiple styles using `.style`
+* Keep the theme styling in CSS classes.
+
+58. **Build a dynamic product card generator.**
+
+Given:
+
+```js
+const products = [
+  { name: "Laptop", price: 50000 },
+  { name: "Mouse", price: 1000 },
+  { name: "Keyboard", price: 2000 }
+];
+```
+
+Generate product cards dynamically using DOM methods.
+
+59. **Build a tab component.**
+
+Create three tabs:
+
+```text
+Home | About | Contact
+```
+
+Clicking a tab should:
+
+* Activate the selected tab
+* Remove the active class from other tabs
+* Display the corresponding content
+
+60. **DOM Mini Project — Shopping Cart**
+
+Build a small shopping cart where users can:
+
+* Add products
+* Remove products
+* Increase/decrease quantity
+* Dynamically update the total price
+* Add/remove CSS classes based on cart state
+* Create and remove DOM elements dynamically
