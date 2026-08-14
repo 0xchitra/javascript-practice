@@ -26,3 +26,26 @@ console.log(aboutByAll);
 // querySelectorAll = all matching element, we can iterate over them
 
 //6
+// getElementsByClassName = returns a live HTMLCollection
+// querySelectorAll = returns a static nodelist
+
+//7
+// HTMLCollection = contains elements, usually live, has .index, can be accessed by using index
+// nodelist = contains nodes, has .length, support forEach()
+
+//8
+let fruits = document.querySelectorAll("li ul");
+fruits.forEach((fruit) => {
+  console.log(fruit.textContent);
+});
+
+//9
+let firstItem = document.querySelector(".frt");
+console.log(firstItem.textContent);
+
+//10
+document.querySelector("#name"); // by id
+document.querySelector(".name"); // by class
+document.querySelector("h1"); //by tag
+document.querySelector([(src = "abc.com")]); // by attribute
+
