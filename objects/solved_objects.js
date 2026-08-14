@@ -510,3 +510,40 @@ function objectDifference(obj1, obj2) {
 }
 
 console.log(objectDifference(obj1, obj2));
+
+//41
+const obj41 = {};
+obj41.self = obj41;
+
+function deepClone(obj, seen = new WeakMap()) {
+  if (obj === null || typeof obj !== "object") {
+    return obj;
+  }
+
+  if (seen.has(obj)) {
+    return seen.get(obj);
+  }
+  const clone = Array.isArray(obj) ? [] : {};
+  seen.set(obj, clone);
+
+  for (const key in obj) {
+    clone[key] = deepClone(obj[key], seen);
+  }
+  return clone;
+}
+
+//42
+function pick(obj, properties) {
+  const result = {};
+
+  for (const property of properties) {
+    if (property in obj) {
+      result[property] = obj[property];
+    }
+  }
+
+  return result;
+}
+
+console.log(pick(user, ["name", "age"]));
+
