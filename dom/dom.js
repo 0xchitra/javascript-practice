@@ -49,3 +49,28 @@ document.querySelector(".name"); // by class
 document.querySelector("h1"); //by tag
 document.querySelector([(src = "abc.com")]); // by attribute
 
+//11
+// textContent = to access all text inside an element
+// innerText = to access the visible taxts of an element
+// innerHTML = to access the HTML markup inside an element
+
+//12
+let box = document.querySelector("#box");
+console.log(box.textContent);
+console.log(box.innerText);
+console.log(box.innerHTML);
+
+//13
+box.innerText = "Hello innerText";
+
+//14
+box.innerHTML = "<h3>Hello innerHtml</h3> <p>lorem hu khs hisdl  dhoie asdfh lok dfienhf<p>"
+
+//15
+// If the input contains malicious HTML/JavaScript, it can potentially lead to Cross-Site Scripting (XSS).
+
+// For example, untrusted input like:
+
+// <img src="x" onerror="alert('XSS')">
+// can be dangerous when inserted as HTML.
+
