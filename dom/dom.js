@@ -91,11 +91,11 @@ document.body.append(paragraph);
 // some attributes : id, class, href, src, alt
 
 //19
-let image = document.querySelector("profile");
-console.log(image.getAttribute("src"));
+// let image = document.querySelector("profile");
+// console.log(image.getAttribute("src"));
 
 //20
-image.setAttribute("src", "new_profile.jpg");
+// image.setAttribute("src", "new_profile.jpg");
 
 //21
 paragraph.setAttribute("class", "para");
@@ -108,10 +108,37 @@ paragraph.removeAttribute("class");
 // setAttribute = works with the elements html attributes
 
 //24
-image.setAttribute("src", "new.jpg");
-image.setAttribute("alt", "new profile pic");
+// image.setAttribute("src", "new.jpg");
+// image.setAttribute("alt", "new profile pic");
 
 //25
 let link = document.querySelector("a");
 link.setAttribute("href", "www.new.com");
 link.setAttribute("target", "_blank");
+
+//26
+// hasAttribute = check whether an attribute exist
+// getAttribute = gets an attribute value
+// setAttribute = creates or changes an attribute
+// removeAttribute = removes an attribute
+
+//27
+let button = document.querySelector("#btn");
+let userId = button.getAttribute("data-user-id"); //using getAttribute
+console.log(userId);
+
+let userIdd = button.dataset.userId; //by dataset
+console.log(userIdd);
+
+//28
+// createElement = creates an actual DOM Element
+// innerHTML = parses an HTML string and creates the corresponding DOM
+
+//29
+// solved in Q17;
+
+//30
+let lists = document.querySelector("#fruits");
+let items = document.createElement("li");
+items.textContent = "Guava";
+lists.append(items);
