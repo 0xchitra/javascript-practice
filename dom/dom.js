@@ -64,7 +64,8 @@ console.log(box.innerHTML);
 box.innerText = "Hello innerText";
 
 //14
-box.innerHTML = "<h3>Hello innerHtml</h3> <p>lorem hu khs hisdl  dhoie asdfh lok dfienhf<p>"
+box.innerHTML =
+  "<h3>Hello innerHtml</h3> <p>lorem hu khs hisdl  dhoie asdfh lok dfienhf<p>";
 
 //15
 // If the input contains malicious HTML/JavaScript, it can potentially lead to Cross-Site Scripting (XSS).
@@ -74,3 +75,24 @@ box.innerHTML = "<h3>Hello innerHtml</h3> <p>lorem hu khs hisdl  dhoie asdfh lok
 // <img src="x" onerror="alert('XSS')">
 // can be dangerous when inserted as HTML.
 
+//16
+let list = document.querySelectorAll("li");
+list.forEach((li) => {
+  console.log(li.textContent);
+});
+
+//17
+let paragraph = document.createElement("p");
+paragraph.textContent = "hey this paragraph is created with dom";
+document.body.append(paragraph);
+
+//18
+// attributes provide additional information for an HTML Element.
+// some attributes : id, class, href, src, alt
+
+//19
+let image = document.querySelector("profile");
+console.log(image.getAttribute("src"));
+
+//20
+image.setAttribute("src", "new_profile.jpg");
