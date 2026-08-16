@@ -44,9 +44,9 @@ let firstItem = document.querySelector(".frt");
 console.log(firstItem.textContent);
 
 //10
+document.querySelector("h1"); //by tag
 document.querySelector("#name"); // by id
 document.querySelector(".name"); // by class
-document.querySelector("h1"); //by tag
 document.querySelector([(src = "abc.com")]); // by attribute
 
 //11
@@ -96,3 +96,22 @@ console.log(image.getAttribute("src"));
 
 //20
 image.setAttribute("src", "new_profile.jpg");
+
+//21
+paragraph.setAttribute("class", "para");
+
+//22
+paragraph.removeAttribute("class");
+
+//23
+// Element.id = directly accesses the elements dom property
+// setAttribute = works with the elements html attributes
+
+//24
+image.setAttribute("src", "new.jpg");
+image.setAttribute("alt", "new profile pic");
+
+//25
+let link = document.querySelector("a");
+link.setAttribute("href", "www.new.com");
+link.setAttribute("target", "_blank");
