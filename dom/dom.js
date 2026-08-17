@@ -142,3 +142,25 @@ let lists = document.querySelector("#fruits");
 let items = document.createElement("li");
 items.textContent = "Guava";
 lists.append(items);
+
+//31
+// append() = adds content at the end
+// appendChild() = adds ONE Node at the end
+// prepend() = adds content at the beginning
+
+//32
+// solved in Q30
+
+//33
+const element = document.querySelector("#box");
+element.remove();
+
+//34
+// remove() = remove the element itself
+// removeChild() = parent remove a specific child
+
+//35
+let newBtn = document.createElement("button");
+newBtn.textContent = "Click Me";
+document.body.appendChild(newBtn);
+
