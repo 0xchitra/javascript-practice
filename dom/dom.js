@@ -164,3 +164,71 @@ let newBtn = document.createElement("button");
 newBtn.textContent = "Click Me";
 document.body.appendChild(newBtn);
 
+//36
+let div = document.createElement("div");
+let h2 = document.createElement("h1");
+h2.textContent = "Javascript";
+let p = document.createElement("p");
+p.textContent = "Dom Practice";
+div.append(h2, p);
+document.body.appendChild(div);
+
+//37
+let names = ["Chitra", "Daya", "Hugo", "Ravi", "Sita"];
+let ul = document.querySelector("ul");
+names.forEach((name) => {
+  let li = document.createElement("li");
+  li.textContent = name;
+  ul.appendChild(li);
+});
+
+//38
+let listss = document.querySelector("ul");
+
+names.forEach((name) => {
+  let li = document.createElement("li");
+  li.textContent = name;
+
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+
+  deleteBtn.addEventListener("click", () => {
+    li.remove();
+  });
+
+  li.appendChild(deleteBtn);
+  listss.appendChild(li);
+});
+
+//39
+let itemsList = document.querySelector("#items");
+
+let firstitem = document.createElement("li");
+firstitem.textContent = "New First Item";
+
+let lastItem = document.createElement("li");
+lastItem.textContent = "New Last Item";
+
+itemsList.prepend(firstitem);
+itemsList.append(lastItem);
+
+//40
+function createCard(title, description) {
+  let card = document.createElement("div");
+
+  let heading = document.createElement("h2");
+  heading.textContent = title;
+
+  let paragraph = document.createElement("p");
+  paragraph.textContent = description;
+
+  card.append(heading, paragraph);
+  return card;
+}
+
+const card = createCard(
+  "JavaScript",
+  "Learn DOM manipulation"
+);
+
+document.body.appendChild(card);
