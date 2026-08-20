@@ -10,9 +10,49 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-size: 28px;
+    }
+    body {
+      padding: 12px;
+      margin: 12px;
+      background: lightgoldenrodyellow;
+    }
+    .completed {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+
+    .todo-item {
+      margin: 8px 0;
+    }
+
+    .delete-btn {
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-left: 10px;
+      color: red;
+      font-weight: 500;
+      border-radius: 120px;
+    }
+
+    li {
+      display: flex;
+      color: white;
+      font-weight: 600;
+      padding: 10px;
+      background-color: rgb(255, 122, 70);
+      border: 6px solid rgb(255, 255, 255);
+      border-radius: 12px;
+      text-align: left;
+      justify-content: space-between;
     }
   </style>
   <body>
+
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <button id="addBtn">Add</button>
+
+    <ul id="todoList"></ul>
     <script src="todoDom.js"></script>
   </body>
 </html>
