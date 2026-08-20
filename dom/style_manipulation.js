@@ -51,3 +51,34 @@ head.style.color = "blue";
 //50
 head.classList.remove("head");
 
+//51
+let dark = document.querySelector("#darkBtn");
+dark.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
+//52
+// if (box.classList.contains("active")) {
+//   console.log("The element has the active class.");
+// } else {
+//   console.log("The element does not have the active class.");
+// }
+
+//53
+let menu = document.querySelector("#menu");
+let menuBtn = document.querySelector("#menuBtn");
+
+menuBtn.addEventListener("click", function () {
+  menu.classList.toggle("hidden");
+});
+
+//54
+let headings = document.querySelectorAll(".heading");
+
+headings.forEach((heading) => {
+  heading.addEventListener("click", () => {
+    let content = heading.nextElementSibling;
+
+    content.classList.toggle("hidden");
+  });
+});
