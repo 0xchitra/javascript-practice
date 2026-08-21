@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab.active {
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="tabs">
+      <button class="tab active" data-tab="home">Home</button>
+      <button class="tab" data-tab="about">About</button>
+      <button class="tab" data-tab="contact">Contact</button>
+    </div>
+
+    <div class="content">
+      <div class="tab-content active" id="home">
+        <h2>Home</h2>
+        <p>Welcome to the home page.</p>
+      </div>
+
+      <div class="tab-content" id="about">
+        <h2>About</h2>
+        <p>This is the about page.</p>
+      </div>
+
+      <div class="tab-content" id="contact">
+        <h2>Contact</h2>
+        <p>Contact us here.</p>
+      </div>
+    </div>
+    <script src="tab_component.js"></script>
+  </body>
+</html>
